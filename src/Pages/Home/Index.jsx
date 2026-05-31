@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../../Component/Footer'
 import Header from '../../Component/Header'
 
 const Index = () => {
+  const [activeCaseTab, setActiveCaseTab] = useState('development')
+
   return (
     <>
         {/* Main */}
@@ -280,23 +282,23 @@ const Index = () => {
       <div className="case-studio">
         <ul className="nav nav-pills case-studio-tabs" id="myTab" role="tablist">
           <li className="nav-item">
-            <button className="nav-link active" id="development-tab" data-bs-toggle="tab" href="#development" role="tab" aria-controls="development" aria-selected="true">Development</button>
+            <button type="button" className={`nav-link ${activeCaseTab === 'development' ? 'active' : ''}`} id="development-tab" onClick={() => setActiveCaseTab('development')} role="tab" aria-controls="development" aria-selected={activeCaseTab === 'development'}>Development</button>
           </li>
           <li className="nav-item">
-            <button className="nav-link" id="woo_commerce-tab" data-bs-toggle="tab" href="#woo_commerce" role="tab" aria-controls="woo_commerce" aria-selected="false">Woo Commerce</button>
+            <button type="button" className={`nav-link ${activeCaseTab === 'woo_commerce' ? 'active' : ''}`} id="woo_commerce-tab" onClick={() => setActiveCaseTab('woo_commerce')} role="tab" aria-controls="woo_commerce" aria-selected={activeCaseTab === 'woo_commerce'}>Woo Commerce</button>
           </li>
           <li className="nav-item">
-            <button className="nav-link" id="crm_solutions-tab" data-bs-toggle="tab" href="#crm_solutions" role="tab" aria-controls="crm_solutions" aria-selected="false">CRM Solutions</button>
+            <button type="button" className={`nav-link ${activeCaseTab === 'crm_solutions' ? 'active' : ''}`} id="crm_solutions-tab" onClick={() => setActiveCaseTab('crm_solutions')} role="tab" aria-controls="crm_solutions" aria-selected={activeCaseTab === 'crm_solutions'}>CRM Solutions</button>
           </li>
           <li className="nav-item">
-            <button className="nav-link" id="web_designing-tab" data-bs-toggle="tab" href="#web_designing" role="tab" aria-controls="web_designing" aria-selected="false">Web Designing</button>
+            <button type="button" className={`nav-link ${activeCaseTab === 'web_designing' ? 'active' : ''}`} id="web_designing-tab" onClick={() => setActiveCaseTab('web_designing')} role="tab" aria-controls="web_designing" aria-selected={activeCaseTab === 'web_designing'}>Web Designing</button>
           </li>
           <li className="nav-item">
-            <button className="nav-link" id="it_support-tab" data-bs-toggle="tab" href="#it_support" role="tab" aria-controls="it_support" aria-selected="false">IT Support</button>
+            <button type="button" className={`nav-link ${activeCaseTab === 'it_support' ? 'active' : ''}`} id="it_support-tab" onClick={() => setActiveCaseTab('it_support')} role="tab" aria-controls="it_support" aria-selected={activeCaseTab === 'it_support'}>IT Support</button>
           </li>
         </ul>
         <div className="tab-content case-studio-tab-content">
-          <div className="tab-pane fade show active" id="development" role="tabpanel" aria-labelledby="development-tab">
+          <div className={`tab-pane fade ${activeCaseTab === 'development' ? 'show active' : ''}`} id="development" role="tabpanel" aria-labelledby="development-tab">
             <div className="case-studio-body d-flex">
               <div className="left d-flex flex-1">
                 <div className="case-studio-img-card simple-shadow">
@@ -323,7 +325,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="tab-pane fade" id="woo_commerce" role="tabpanel" aria-labelledby="woo_commerce-tab">
+          <div className={`tab-pane fade ${activeCaseTab === 'woo_commerce' ? 'show active' : ''}`} id="woo_commerce" role="tabpanel" aria-labelledby="woo_commerce-tab">
             <div className="case-studio-body d-flex">
               <div className="left d-flex flex-1">
                 <div className="case-studio-img-card simple-shadow">
@@ -350,7 +352,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="tab-pane fade" id="crm_solutions" role="tabpanel" aria-labelledby="crm_solutions-tab">
+          <div className={`tab-pane fade ${activeCaseTab === 'crm_solutions' ? 'show active' : ''}`} id="crm_solutions" role="tabpanel" aria-labelledby="crm_solutions-tab">
             <div className="case-studio-body d-flex">
               <div className="left d-flex flex-1">
                 <div className="case-studio-img-card simple-shadow">
@@ -377,7 +379,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="tab-pane fade" id="web_designing" role="tabpanel" aria-labelledby="web_designing-tab">
+          <div className={`tab-pane fade ${activeCaseTab === 'web_designing' ? 'show active' : ''}`} id="web_designing" role="tabpanel" aria-labelledby="web_designing-tab">
             <div className="case-studio-body d-flex">
               <div className="left d-flex flex-1">
                 <div className="case-studio-img-card simple-shadow">
@@ -404,7 +406,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="tab-pane fade" id="it_support" role="tabpanel" aria-labelledby="it_support-tab">
+          <div className={`tab-pane fade ${activeCaseTab === 'it_support' ? 'show active' : ''}`} id="it_support" role="tabpanel" aria-labelledby="it_support-tab">
             <div className="case-studio-body d-flex">
               <div className="left d-flex flex-1">
                 <div className="case-studio-img-card simple-shadow">
