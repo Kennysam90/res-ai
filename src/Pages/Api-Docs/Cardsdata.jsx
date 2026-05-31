@@ -10,7 +10,7 @@ import {
   Cloud,
 } from "lucide-react";
 
-export const Cards = [
+export const cards = [
   {
     id: "getting-started",
     title: "Getting Started",

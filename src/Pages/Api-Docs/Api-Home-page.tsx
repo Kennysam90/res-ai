@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Sparkles, Moon, ArrowRight, Code, Globe, Search } from "lucide-react";
-import { cards } from "./cardsData";
+import { cards } from "../Api-Docs/Cardsdata";
 
 export default function ApiHomePage({ onCardClick }) {
   return (
