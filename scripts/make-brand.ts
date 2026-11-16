@@ -150,7 +150,7 @@ const card = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" 
     <tspan x="80" y="300">AI, robotics, 3D</tspan>
     <tspan x="80" y="386">and software.</tspan>
   </text>
-  <text x="80" y="462" ${FONT} font-size="30" fill="#D6D2FF">The company behind Apsuni, AnimeDoc and Adorė</text>
+  <text x="80" y="462" ${FONT} font-size="30" fill="#D6D2FF">The company behind Apsuni and Adorė</text>
   <text x="80" y="556" ${FONT} font-size="24" fill="#16E4F4" letter-spacing="3">WWW.RESBROTHERX.COM</text>
 </svg>`
 await sharp(Buffer.from(card)).jpeg({ quality: 86, mozjpeg: true }).toFile(join(PUBLIC, 'og', 'default.jpg'))

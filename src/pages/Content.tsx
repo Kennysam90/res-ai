@@ -18,11 +18,11 @@ const fmtDate = (iso: string) =>
 
 export function Docs() {
   const path = '/docs'
-  const description = 'Documentation for Resbrotherx products: the AnimeDoc API guide, Apsuni and Adorė guides, the Brainbox design overview, and feeds and files for AI assistants.'
+  const description = 'Documentation for Resbrotherx products: the Apsuni and Adorė guides, the Brainbox design overview, and feeds and files for AI assistants.'
   return (
     <Page
       className="docs-page"
-      seo={{ title: 'Resbrotherx Documentation — API Guides for AnimeDoc, Apsuni, Adorė and Brainbox', description, path, jsonLd: [webPage({ path, name: 'Resbrotherx documentation', description, type: 'CollectionPage', about: orgRef }), breadcrumbs([{ name: 'Docs', path }])] }}
+      seo={{ title: 'Resbrotherx Documentation — Guides for Apsuni, Adorė and Brainbox', description, path, jsonLd: [webPage({ path, name: 'Resbrotherx documentation', description, type: 'CollectionPage', about: orgRef }), breadcrumbs([{ name: 'Docs', path }])] }}
     >
       <PageHero kicker="Documentation" title="Guides and API docs" text="One place to start for everything Resbrotherx ships. Each guide links to the product's full reference." crumbs={[{ name: 'Docs', path }]} />
       <section className="rbx-section">
@@ -45,17 +45,20 @@ export function Docs() {
         <div className="custom-container">
           <div className="rbx-split">
             <div className="rbx-prose" data-reveal>
-              <h2>Quick start: your first API call</h2>
-              <p>The AnimeDoc API is our public REST API. Create a free key at <A href="https://animedoc.cloud">animedoc.cloud</A>, then:</p>
-              <Blocks blocks={[{ code: 'curl -X POST "https://api.animedoc.cloud/api/v2/anime/search/" \\\n  -H "X-API-Key: $ANIMEDOC_API_KEY" \\\n  -H "Content-Type: application/json" \\\n  -d \'{"keyword": "one piece", "page": 1, "perPage": 10}\'', title: 'Search the catalogue' }]} />
-              <A to="/docs/animedoc-api" className="theme-btn">Read the API guide <Icon name="iconoir-arrow-up-right" /></A>
+              <h2>Quick start: a website or app with Apsuni</h2>
+              <p>The fastest way to get something live with Resbrotherx is Apsuni:</p>
+              <ol>
+                <li>Pick a website or app template, or bring your own Figma design.</li>
+                <li>Describe what you need. Apsuni organises it into a brief.</li>
+                <li>Choose a plan, priced in naira, and pay securely.</li>
+                <li>A person reviews the release, and your site or app goes live.</li>
+              </ol>
+              <A to="/docs/apsuni" className="theme-btn">Read the Apsuni guide <Icon name="iconoir-arrow-up-right" /></A>
             </div>
             <div className="rbx-prose" data-reveal>
               <h2>Official references</h2>
               <p>Our guides are overviews. These are the sources of truth:</p>
               <ul className="rbx-linklist">
-                <li><A href="https://animedoc.cloud/docs"><Icon name="iconoir-terminal" /> <span>AnimeDoc API reference and console</span> <Icon name="iconoir-open-new-window" /></A></li>
-                <li><A href="https://animedoc.cloud/tutorials"><Icon name="iconoir-book" /> <span>AnimeDoc tutorials</span> <Icon name="iconoir-open-new-window" /></A></li>
                 <li><A href="https://apsuni.com/docs"><Icon name="iconoir-page" /> <span>Apsuni documentation</span> <Icon name="iconoir-open-new-window" /></A></li>
                 <li><A href="https://github.com/resbrotherx"><Icon name="iconoir-github" /> <span>Source code on GitHub</span> <Icon name="iconoir-open-new-window" /></A></li>
               </ul>

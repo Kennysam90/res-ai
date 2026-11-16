@@ -177,9 +177,9 @@ export function ContactSection({ heading = 'h2' }: { heading?: 'h1' | 'h2' }) {
                 <p>
                   {SITE.legalName}
                   <br />
-                  {SITE.location.street}, {SITE.location.city}
+                  {SITE.location.city}, {SITE.location.region}
                   <br />
-                  {SITE.location.region}, {SITE.location.country}
+                  {SITE.location.country}
                 </p>
               </div>
               <ul className="contact-social-links">
@@ -201,7 +201,7 @@ export function ContactSection({ heading = 'h2' }: { heading?: 'h1' | 'h2' }) {
 
 const CONTACT_FAQS = [
   { q: 'How do I contact Resbrotherx?', a: `Fill in the form on this page, or write to ${SITE.email}. Tell us what you want to build and we will reply by email.` },
-  { q: 'Where do I get help with Apsuni, AnimeDoc or Adorė?', a: 'Each product has its own support. For Apsuni write to support@apsuni.com. For AnimeDoc write to support@animedoc.cloud or open a ticket in your dashboard. For Adorė use the help section on adorė.com.' },
+  { q: 'Where do I get help with Apsuni or Adorė?', a: 'Each product has its own support. For Apsuni write to support@apsuni.com. For Adorė use the help section on adorė.com.' },
   { q: 'Who do I contact about press or partnerships?', a: `Choose "Press or partnership" in the form, or write to ${SITE.email}. Facts and logos are on the [press page](/press).` },
   { q: 'Where is Resbrotherx located?', a: 'Resbrotherx is based in Enugu, Enugu State, Nigeria. We work with people everywhere by email and video call.' },
 ]

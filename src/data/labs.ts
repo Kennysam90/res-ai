@@ -25,7 +25,6 @@ export const LABS: Lab[] = [
       { ul: [
         '**[Adorė](/products/adore)**: photo and video try-on, and the Adorė AI assistant that searches the whole app and can act for the shopper.',
         '**[Apsuni](/products/apsuni)**: AI that organises a goal, a reference or a voice note into product direction, screens and technical choices, plus Figma to code and image to code.',
-        '**[AnimeDoc](/products/animedoc)**: a support assistant that answers customers from a written knowledge base and hands over to a person when it should.',
         '**[Brainbox](/products/brainbox)**: agents that analyse logs and query a database safely. This one is still in development.',
       ] },
       { h2: 'Directions we are exploring' },

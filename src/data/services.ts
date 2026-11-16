@@ -156,11 +156,11 @@ export const SERVICES: Service[] = [
     ],
     body: [
       { h2: 'One codebase, two stores' },
-      { p: 'We build mobile apps with **React Native** and **Expo**, so one TypeScript codebase produces both the iOS and the Android app. It is the approach behind the [Adorė](/products/adore) app, and behind the bill-payment and crowdfunding apps in our [public code](/portfolio).' },
+      { p: 'We build mobile apps with **React Native** and **Expo**, so one TypeScript codebase produces both the iOS and the Android app. It is the approach behind the [Adorė](/products/adore) app, and behind the mobile apps in our [public code](/portfolio).' },
       { h2: 'What we build' },
       { ul: [
         'Shopping apps with baskets, checkout and order tracking.',
-        'Payment and bill-payment apps with PINs, receipts and transaction history.',
+        'Apps that take payments, with receipts and transaction history.',
         'Apps with camera features, such as photo upload for AI try-on.',
         'Apps that share one account and one backend with a website and a staff dashboard.',
         'Offline-friendly screens, push notifications and deep links.',
@@ -191,7 +191,7 @@ export const SERVICES: Service[] = [
     tools: ['React', 'Vite', 'Django', 'Node.js', 'PostgreSQL', 'Nginx'],
     proof: [
       { label: 'Apsuni', to: '/products/apsuni' },
-      { label: 'AnimeDoc', to: '/products/animedoc' },
+      { label: 'Adorė', to: '/products/adore' },
       { label: 'How this site is built', to: '/blog/why-we-pre-render-every-page' },
     ],
     body: [
@@ -234,18 +234,17 @@ export const SERVICES: Service[] = [
     menuTitle: 'SaaS',
     menuSub: 'Platforms',
     icon: 'iconoir-cloud',
-    image: 'product-animedoc-pricing',
+    image: 'product-apsuni-about',
     summary: 'Subscription software from first idea to paying customers: accounts, plans, billing, API keys, usage limits and dashboards.',
     cardText: 'Subscription software: plans, billing, API keys and dashboards.',
     tools: ['Django', 'PostgreSQL', 'Flutterwave', 'Paystack', 'JWT', 'Rate limiting'],
     proof: [
-      { label: 'AnimeDoc plans and API keys', to: '/products/animedoc' },
       { label: 'Apsuni plans', to: '/products/apsuni' },
       { label: 'Our SaaS launch checklist', to: '/blog/saas-launch-checklist' },
     ],
     body: [
       { h2: 'The parts every SaaS needs' },
-      { p: 'A software-as-a-service product is more than its main feature. It needs accounts, plans, payments, limits, a dashboard and support. We have built all of these for our own products: [AnimeDoc](/products/animedoc) sells API plans with per-day and per-minute limits, and [Apsuni](/products/apsuni) sells one-time plans with wallets and credits.' },
+      { p: 'A software-as-a-service product is more than its main feature. It needs accounts, plans, payments, limits, a dashboard and support. We have built these for our own products: [Apsuni](/products/apsuni) sells one-time plans with wallets and credits, and [Brainbox](/products/brainbox) is designed with per-tenant limits and audit logs.' },
       { h2: 'What we build' },
       { ul: [
         '**Accounts and access.** Sign-up, sign-in, password reset and roles.',
@@ -260,7 +259,7 @@ export const SERVICES: Service[] = [
     ],
     faqs: [
       { q: 'Which payment providers do you integrate?', a: 'We have integrated Flutterwave and Paystack for card, bank transfer and USSD payments, with webhooks to confirm each transaction.' },
-      { q: 'Can you build usage-based limits for an API product?', a: 'Yes. AnimeDoc, one of our own products, enforces per-day and per-minute limits for each API key and returns the remaining allowance with every response.' },
+      { q: 'Can you build usage-based limits for an API product?', a: 'Yes. We build per-day and per-minute limits for each API key, and return the remaining allowance with every response.' },
     ],
   },
   {
@@ -276,7 +275,7 @@ export const SERVICES: Service[] = [
     proof: [
       { label: 'Hair Store API', to: '/portfolio/hair-store-api' },
       { label: 'Company portfolio API', to: '/portfolio/company-portfolio-api' },
-      { label: 'AnimeDoc API guide', to: '/docs/animedoc-api' },
+      { label: 'SaaS development', to: '/services/saas-development' },
     ],
     body: [
       { h2: 'The part nobody sees, done properly' },

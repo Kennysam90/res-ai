@@ -3,6 +3,11 @@
 
 import type { SocialLink } from '../types'
 
+// AnimeDoc is hidden from this site for now. Its product page, API guide and
+// related article stay in the code and come back when this is set to true.
+// The wording elsewhere was edited in one commit: revert that commit to restore it.
+export const SHOW_ANIMEDOC = false
+
 export const SITE = {
   name: 'Resbrotherx',
   // Other spellings people and our own products use. Kept so search engines
@@ -10,12 +15,12 @@ export const SITE = {
   altNames: ['ResBrotherX', 'Resbrotherx Technologies', 'Res Brother X'],
   legalName: 'Resbrotherx Technologies',
   url: 'https://www.resbrotherx.com',
-  // The same identifiers Apsuni, AnimeDoc and Adorė point at.
+  // The same identifiers Apsuni and Adorė point at.
   orgId: 'https://www.resbrotherx.com/#organization',
   websiteId: 'https://www.resbrotherx.com/#website',
   tagline: 'AI, robotics, 3D and software, built to ship.',
   oneLiner:
-    'Resbrotherx is a technology company founded by Patrick Francis Ugochukwu. It builds AI applications, robotics, 3D animation, mobile apps, web apps and SaaS platforms, and is the company behind Apsuni, AnimeDoc and Adorė.',
+    'Resbrotherx is a technology company founded by Patrick Francis Ugochukwu. It builds AI applications, robotics, 3D animation, mobile apps, web apps and SaaS platforms, and is the company behind Apsuni and Adorė.',
   mission:
     'We build products that make ambitious digital work easier to start and finish.',
   // The founder has published software under the Resbrotherx name since 2020
@@ -30,7 +35,6 @@ export const SITE = {
     natureOfBusiness: 'Computer programming, consultancy and related activities',
   },
   location: {
-    street: '647 Okpara Avenue',
     city: 'Enugu',
     region: 'Enugu State',
     country: 'Nigeria',
@@ -60,14 +64,14 @@ export const FOUNDER = {
   photo: '/assets/media/founder-first-nigerian.webp' as string | null,
   photoThumbnail: '/assets/media/founder-first-nigerian-square.webp',
   summary:
-    'Patrick Francis Ugochukwu is a software engineer and the founder and CEO of Resbrotherx, the technology company behind Apsuni, AnimeDoc and Adorė. He is also the CEO of Apsuni.',
+    'Patrick Francis Ugochukwu is a software engineer and the founder and CEO of Resbrotherx, the technology company behind Apsuni and Adorė. He is also the CEO of Apsuni.',
   skills: ['Python', 'Django', 'JavaScript', 'TypeScript', 'React', 'React Native', 'Node.js', 'HTML & CSS'],
   github: 'https://github.com/resbrotherx',
   githubSince: 'May 2020',
   sameAs: [
     'https://github.com/resbrotherx',
     'https://apsuni.com/founder',
-    'https://animedoc.cloud/founder',
+    ...(SHOW_ANIMEDOC ? ['https://animedoc.cloud/founder'] : []),
   ],
 }
 
@@ -84,7 +88,7 @@ export const PRODUCT_CHANNELS: SocialLink[] = [
   { name: 'Apsuni on YouTube', url: 'https://www.youtube.com/@APSUNI', icon: 'iconoir-youtube' },
   { name: 'Apsuni on Instagram', url: 'https://www.instagram.com/apsuni_ai/', icon: 'iconoir-instagram' },
   { name: 'Apsuni on X', url: 'https://x.com/apsuni_ai', icon: 'iconoir-x' },
-  { name: 'AnimeDoc on YouTube', url: 'https://www.youtube.com/@animedoc', icon: 'iconoir-youtube' },
+  ...(SHOW_ANIMEDOC ? [{ name: 'AnimeDoc on YouTube', url: 'https://www.youtube.com/@animedoc', icon: 'iconoir-youtube' }] : []),
 ]
 
 // What we build with. Shown in the home page marquee and on /technologies.
@@ -104,7 +108,7 @@ export const NAV = {
   ],
   products: [
     { label: 'Apsuni', to: '/products/apsuni' },
-    { label: 'AnimeDoc', to: '/products/animedoc' },
+    ...(SHOW_ANIMEDOC ? [{ label: 'AnimeDoc', to: '/products/animedoc' }] : []),
     { label: 'Adorė', to: '/products/adore' },
     { label: 'Brainbox', to: '/products/brainbox' },
     { label: 'All products', to: '/products' },

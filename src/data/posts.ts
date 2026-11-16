@@ -1,14 +1,16 @@
 // Blog articles. Dates are the real publication dates: do not back-date.
 // Company articles state facts only; technical articles explain how things work.
 import type { Post } from '../types'
+import { SHOW_ANIMEDOC } from './site'
+import { ANIMEDOC_POST } from './animedoc'
 
 const TODAY = '2026-11-16'
 
-export const POSTS: Post[] = [
+const ALL_POSTS: Post[] = [
   {
     slug: 'the-resbrotherx-story',
     title: 'The Resbrotherx story: from a GitHub handle to a registered technology company',
-    description: 'How Resbrotherx grew from the name on a developer\'s GitHub account in 2020 into the registered company behind Apsuni, AnimeDoc and Adorė.',
+    description: 'How Resbrotherx grew from the name on a developer\'s GitHub account in 2020 into the registered company behind Apsuni and Adorė.',
     date: TODAY,
     category: 'Company',
     tags: ['Resbrotherx', 'Patrick Francis Ugochukwu', 'Company history'],
@@ -19,13 +21,12 @@ export const POSTS: Post[] = [
       { p: 'The first projects were the kind every working developer builds: websites, dashboards, online stores and APIs, written in Python with Django and in JavaScript with React and Node.js. Mobile apps followed, written with React Native. Most of that code is still public on [GitHub](https://github.com/resbrotherx), where the account now holds dozens of repositories.' },
       { p: 'What mattered about those years was not any single project. It was the habit: finish the thing, put it online, move to the next one. That habit is still how Resbrotherx works.' },
       { h2: 'From projects to products' },
-      { p: 'A project ends when it is delivered. A product keeps going: it has customers, support, payments and a roadmap. Over time the work at Resbrotherx moved from the first kind to the second, and three products came out of it.' },
+      { p: 'A project ends when it is delivered. A product keeps going: it has customers, support, payments and a roadmap. Over time the work at Resbrotherx moved from the first kind to the second, and products came out of it.' },
       { ul: [
         '**[Apsuni](/products/apsuni)** turns a website template or a Figma design into a live, branded website or mobile app that is built, hosted and deployed for you.',
-        '**[AnimeDoc](/products/animedoc)** is a streaming catalogue API for developers, with a website built on the same catalogue.',
         '**[Adorė](/products/adore)** is a boutique for made-to-measure African fashion, with AI try-on and designs you can view in 3D.',
       ] },
-      { p: 'Each product has its own name, website and customers. Resbrotherx is the company that owns and runs all three. That is why the Resbrotherx name appears on AnimeDoc\'s payment page, and why each product\'s site names Resbrotherx as its maker.' },
+      { p: 'Each product has its own name, website and customers. Resbrotherx is the company that owns and runs them, which is why each product\'s site names Resbrotherx as its maker. [Brainbox](/products/brainbox), an AI operations platform, is in development.' },
       { h2: 'November 2026: Resbrotherx Technologies' },
       { p: 'In November 2026 the name was made formal. **Resbrotherx Technologies** was registered as a business name with the Corporate Affairs Commission of Nigeria, for computer programming, consultancy and related activities. The company is based in Enugu, Enugu State.' },
       { h2: 'What comes next' },
@@ -38,39 +39,6 @@ export const POSTS: Post[] = [
       ] },
       { p: 'The mission that ties them together is short: build products that make ambitious digital work easier to start and finish.' },
       { cta: [{ label: 'About Resbrotherx', to: '/about' }, { label: 'Meet the founder', to: '/founder' }] },
-    ],
-  },
-  {
-    slug: 'one-company-three-products',
-    title: 'One company, three products: how Apsuni, AnimeDoc and Adorė fit together',
-    description: 'Apsuni builds websites and apps, AnimeDoc serves developers and Adorė sells fashion. Here is what they share, and why one company runs all three.',
-    date: TODAY,
-    category: 'Products',
-    tags: ['Apsuni', 'AnimeDoc', 'Adorė', 'Resbrotherx'],
-    image: 'product-apsuni',
-    body: [
-      { p: 'At first glance the three Resbrotherx products have nothing in common. One builds websites, one is a developer API and one sells clothes. Look underneath and they are closer than they seem.' },
-      { h2: 'What each one does' },
-      { table: {
-        head: ['Product', 'For', 'What it does'],
-        rows: [
-          ['[Apsuni](/products/apsuni)', 'Founders, businesses and teams', 'Turns a template or a Figma design into a live website or mobile app, built, hosted and deployed for you'],
-          ['[AnimeDoc](/products/animedoc)', 'Developers and viewers', 'A REST API for search, title details and playback, plus a website on the same catalogue'],
-          ['[Adorė](/products/adore)', 'Shoppers and fashion businesses', 'Made-to-measure African fashion with AI try-on and 3D views'],
-        ],
-      } },
-      { h2: 'What they share' },
-      { h3: 'One engineering approach' },
-      { p: 'All three are built the same way: a React interface, a Django REST backend, PostgreSQL for data, and Nginx behind Cloudflare. Mobile apps are written with React Native. Because the approach is shared, an improvement made for one product can be carried to the others.' },
-      { h3: 'AI doing a specific job' },
-      { p: 'None of the products treats AI as decoration. In Adorė it shows an outfit on the shopper\'s own photo. In Apsuni it turns a goal or a voice note into a structured brief. In AnimeDoc it answers support questions from a written knowledge base. Each has a defined task and a clear point where a person takes over.' },
-      { h3: 'Payments and plans' },
-      { p: 'Each product sells plans, takes payments and enforces limits. The patterns are common across them: one-time payments for a period, webhooks that confirm each transaction and a dashboard that shows what a plan includes.' },
-      { h3: 'They send each other work' },
-      { p: 'The products also connect directly. When an AnimeDoc customer wants a streaming site built for them, the "Build my website" service is delivered by Apsuni. Each product\'s founder page links to the others, and all of them point back to Resbrotherx.' },
-      { h2: 'Why one company' },
-      { p: 'Running three products inside one company keeps the shared parts shared. There is one way of deploying, one way of taking payments and one set of principles for AI. It also means that when Resbrotherx opens a new area, such as [robotics](/labs/robotics) or [3D](/labs/3d-animation), every product can draw on it.' },
-      { cta: [{ label: 'See all products', to: '/products' }] },
     ],
   },
   {
@@ -238,7 +206,7 @@ export const POSTS: Post[] = [
       { h3: '4. How to hand over' },
       { p: 'An assistant must know when to stop. Account problems, refunds, legal questions and anything outside its knowledge go to a person, with the conversation so far attached so the customer does not have to repeat it.' },
       { h2: 'Grounding answers in what is written' },
-      { p: 'For support, the assistant answers from a written knowledge base about the product. If the answer is not there, it says so and points to support. This is how the support assistant in [AnimeDoc](/products/animedoc) is set up, and it is the simplest way to stop an assistant from inventing policy.' },
+      { p: 'For support, the assistant answers from a written knowledge base about the product. If the answer is not there, it says so and points to support. This is how we set up support assistants, and it is the simplest way to stop an assistant from inventing policy.' },
       { h2: 'Testing' },
       { ul: [
         'Collect real requests, including confusing and hostile ones.',
@@ -285,7 +253,7 @@ export const POSTS: Post[] = [
     date: TODAY,
     category: 'Software',
     tags: ['SaaS', 'Billing', 'Launch checklist', 'API products'],
-    image: 'product-animedoc-pricing',
+    image: 'product-apsuni-about',
     body: [
       { p: 'The main feature of a SaaS product is rarely what breaks at launch. It is everything around it: the payment that succeeded but did not activate the plan, the email that never arrived, the limit nobody tested. This is the checklist we run before a product takes its first payment.' },
       { h2: 'Accounts' },
@@ -334,7 +302,7 @@ export const POSTS: Post[] = [
         'Ask support a question.',
         'Request a refund.',
       ] },
-      { p: 'If all four go smoothly, launch. These checks come from running our own products, including [AnimeDoc](/products/animedoc) and [Apsuni](/products/apsuni). More on this work: [SaaS product development](/services/saas-development).' },
+      { p: 'If all four go smoothly, launch. These checks come from running our own products, including [Apsuni](/products/apsuni) and [Adorė](/products/adore). More on this work: [SaaS product development](/services/saas-development).' },
     ],
   },
   {
@@ -372,7 +340,7 @@ export const POSTS: Post[] = [
       { h2: 'Where native still wins' },
       { p: 'Native code is the right tool for demanding graphics, for apps that live deep inside one platform (widgets, watch apps, system extensions) and for features that exist only in the newest platform release. The good news is that the choice is not all or nothing: a React Native app can include native modules for the parts that need them.' },
       { h2: 'What we build this way' },
-      { p: 'The [Adorė](/products/adore) app is built with React Native and Expo, and shares one backend with the Adorė website and staff dashboard. The bill-payment and crowdfunding apps in our [public code](/portfolio) are React Native apps written in TypeScript.' },
+      { p: 'The [Adorė](/products/adore) app is built with React Native and Expo, and shares one backend with the Adorė website and staff dashboard. The mobile apps in our [public code](/portfolio) are React Native apps written in TypeScript.' },
       { h2: 'Our rule of thumb' },
       { p: 'Start with React Native unless you can name the specific thing it cannot do for your app. If you can name it, check whether a native module solves it before deciding to build twice.' },
       { cta: [{ label: 'Mobile app development', to: '/services/mobile-app-development' }] },
@@ -407,7 +375,7 @@ export const POSTS: Post[] = [
         '`BreadcrumbList` so the page\'s place in the site is clear.',
         '`BlogPosting` and `TechArticle` for articles and documentation.',
       ] },
-      { p: 'Using one identifier for the company and one for the founder across resbrotherx.com, apsuni.com, animedoc.cloud and adorė.com lets search engines see that every mention refers to the same company and the same person.' },
+      { p: 'Using one identifier for the company and one for the founder across resbrotherx.com, apsuni.com and adorė.com lets search engines see that every mention refers to the same company and the same person.' },
       { h2: 'Files for crawlers' },
       { table: {
         head: ['File', 'Who reads it', 'What it holds'],
@@ -433,5 +401,7 @@ export const POSTS: Post[] = [
     ],
   },
 ]
+
+export const POSTS: Post[] = SHOW_ANIMEDOC ? [ALL_POSTS[0], ANIMEDOC_POST, ...ALL_POSTS.slice(1)] : ALL_POSTS
 
 export const getPost = (slug: string | undefined) => POSTS.find((p) => p.slug === slug)

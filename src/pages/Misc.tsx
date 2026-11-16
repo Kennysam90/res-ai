@@ -55,7 +55,7 @@ export const Privacy = () => (
       { h2: 'Server logs' },
       { p: 'Like every website, ours is delivered by servers that record technical details of each request: IP address, the page requested, the time, and the browser\'s user-agent string. Our site is served through Cloudflare, which processes the same details to deliver pages and protect against abuse. We use these logs to keep the site running and secure, and we do not use them to build profiles of visitors.' },
       { h2: 'Links to other sites' },
-      { p: 'This site links to our products ([Apsuni](https://apsuni.com), [AnimeDoc](https://animedoc.cloud), [Adorė](https://xn--ador-yva.com)) and to services such as YouTube, Instagram and GitHub. Each has its own privacy policy, which applies once you are there.' },
+      { p: 'This site links to our products ([Apsuni](https://apsuni.com) and [Adorė](https://xn--ador-yva.com)) and to services such as YouTube, Instagram and GitHub. Each has its own privacy policy, which applies once you are there.' },
       { h2: 'Your choices' },
       { ul: [
         'To stop receiving updates, reply to any message we sent and ask to be removed.',
@@ -76,7 +76,7 @@ export const Terms = () => (
     description="Terms of use for resbrotherx.com: how you may use the site and its content, our trademarks, links to our products and limits of liability."
     body={[
       { h2: 'About these terms' },
-      { p: `These terms cover your use of www.resbrotherx.com, the website of ${SITE.legalName} ("Resbrotherx"). By using the site you agree to them. Our products, [Apsuni](https://apsuni.com), [AnimeDoc](https://animedoc.cloud) and [Adorė](https://xn--ador-yva.com), have their own terms, which apply when you use those products.` },
+      { p: `These terms cover your use of www.resbrotherx.com, the website of ${SITE.legalName} ("Resbrotherx"). By using the site you agree to them. Our products, [Apsuni](https://apsuni.com) and [Adorė](https://xn--ador-yva.com), have their own terms, which apply when you use those products.` },
       { h2: 'Using the content' },
       { ul: [
         'You may read, link to, quote and summarise the pages of this site, with a link back to the page.',
@@ -84,7 +84,7 @@ export const Terms = () => (
         'You may not present our content as your own, or use it in a way that suggests we endorse you.',
       ] },
       { h2: 'Names and logos' },
-      { p: 'Resbrotherx, Apsuni, AnimeDoc and Adorė, and their logos, are our names and marks. You may use them to refer to us or our products. The [press page](/press) explains how.' },
+      { p: 'Resbrotherx, Apsuni and Adorė, and their logos, are our names and marks. You may use them to refer to us or our products. The [press page](/press) explains how.' },
       { h2: 'Photographs' },
       { p: 'Some photographs on this site come from Wikimedia Commons and remain under their own licences. Each is credited on the [image credits](/credits) page. Other brand and product names mentioned on this site, such as Arduino, Raspberry Pi and Blender, belong to their owners and are used only to describe the tools we work with.' },
       { h2: 'Accuracy' },
@@ -120,7 +120,7 @@ export const Cookies = () => (
       { h2: 'Our delivery network' },
       { p: 'The site is delivered through Cloudflare. Cloudflare may set a strictly necessary security cookie when it needs to check that a visitor is not an automated attack. This is used only for security.' },
       { h2: 'Our products' },
-      { p: 'Apsuni, AnimeDoc and Adorė are separate websites with accounts and payments, and they use cookies or similar storage for sign-in. See each product\'s own policy.' },
+      { p: 'Apsuni and Adorė are separate websites with accounts and payments, and they use cookies or similar storage for sign-in. See each product\'s own policy.' },
       { h2: 'More' },
       { p: 'See the [privacy policy](/privacy) for everything else this site does and does not collect.' },
     ]}
@@ -136,7 +136,7 @@ export const Refunds = () => (
     description="How payments to Resbrotherx Technologies work: what we charge for, prices in Nigerian naira, secure card payments, and how to request a refund."
     body={[
       { h2: 'Who you are paying' },
-      { p: `Payments are made to ${SITE.legalName}, a business name registered with the ${SITE.registration.body}, at ${SITE.location.street}, ${SITE.location.city}, ${SITE.location.region}, ${SITE.location.country}. The name RESBROTHERX may appear on your bank or card statement.` },
+      { p: `Payments are made to ${SITE.legalName}, a business name registered with the ${SITE.registration.body} and based in ${SITE.location.city}, ${SITE.location.region}, ${SITE.location.country}. The name RESBROTHERX may appear on your bank or card statement.` },
       { h2: 'What we charge for' },
       { ul: [
         '**Software and design projects.** Websites, web apps, mobile apps, SaaS platforms, AI features, 3D and animation work and robotics prototypes, as described on our [services](/services) pages. Every project is priced in a written quote before you pay anything.',
@@ -181,7 +181,7 @@ export function Credits() {
       <section className="rbx-section is-tight">
         <div className="custom-container">
           <div className="rbx-prose rbx-narrow">
-            <p>The photographs listed here come from <A href="https://commons.wikimedia.org">Wikimedia Commons</A>. They have been cropped and resized. Each remains under the licence shown, and images under a ShareAlike licence are offered here under that same licence. Screenshots of Apsuni, AnimeDoc and Adorė are our own.</p>
+            <p>The photographs listed here come from <A href="https://commons.wikimedia.org">Wikimedia Commons</A>. They have been cropped and resized. Each remains under the licence shown, and images under a ShareAlike licence are offered here under that same licence. Screenshots of Apsuni and Adorė are our own.</p>
           </div>
           <div className="rbx-credits">
             {credited.map(([slug, im]) => (

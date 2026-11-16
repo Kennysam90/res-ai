@@ -146,10 +146,10 @@ export const TECH: TechGroup[] = [
 ]
 
 export const FAQS: Faq[] = [
-  { q: 'What is Resbrotherx?', a: 'Resbrotherx is a technology company founded by Patrick Francis Ugochukwu. It builds AI applications, robotics, 3D animation, mobile apps, web apps and SaaS platforms, and is the company behind Apsuni, AnimeDoc and Adorė.' },
+  { q: 'What is Resbrotherx?', a: 'Resbrotherx is a technology company founded by Patrick Francis Ugochukwu. It builds AI applications, robotics, 3D animation, mobile apps, web apps and SaaS platforms, and is the company behind Apsuni and Adorė.' },
   { q: 'Who is the founder of Resbrotherx?', a: 'Resbrotherx was founded by Patrick Francis Ugochukwu, who is also its chief executive officer. He is a software engineer and is also the CEO of Apsuni. You can read more on the [founder page](/founder).' },
-  { q: 'Who is Patrick Francis Ugochukwu?', a: 'Patrick Francis Ugochukwu, also known as Patrick Ugochukwu and Francis Patrick Ugochukwu, is a software engineer and the founder and CEO of Resbrotherx, the technology company behind Apsuni, AnimeDoc and Adorė. He is also the CEO of Apsuni.' },
-  { q: 'What products has Resbrotherx built?', a: 'Resbrotherx owns and runs [Apsuni](/products/apsuni) (websites and mobile apps built, hosted and deployed for you), [AnimeDoc](/products/animedoc) (a streaming catalogue API and website) and [Adorė](/products/adore) (made-to-measure African fashion with AI try-on). [Brainbox](/products/brainbox), an AI operations platform, is in development.' },
+  { q: 'Who is Patrick Francis Ugochukwu?', a: 'Patrick Francis Ugochukwu, also known as Patrick Ugochukwu and Francis Patrick Ugochukwu, is a software engineer and the founder and CEO of Resbrotherx, the technology company behind Apsuni and Adorė. He is also the CEO of Apsuni.' },
+  { q: 'What products has Resbrotherx built?', a: 'Resbrotherx owns and runs [Apsuni](/products/apsuni) (websites and mobile apps built, hosted and deployed for you) and [Adorė](/products/adore) (made-to-measure African fashion with AI try-on). [Brainbox](/products/brainbox), an AI operations platform, is in development.' },
   { q: 'What does Resbrotherx work on?', a: 'Four fields: artificial intelligence, robotics with Arduino and Raspberry Pi, 3D modelling and animation in Blender, and software, meaning mobile apps, web applications and SaaS platforms.' },
   { q: 'Is ResBrotherX the same company as Resbrotherx?', a: 'Yes. The name is written both Resbrotherx and ResBrotherX. The registered business name is Resbrotherx Technologies.' },
   { q: 'Where is Resbrotherx based?', a: 'Resbrotherx is based in Enugu, Enugu State, Nigeria, and its products are used online from anywhere.' },
@@ -158,8 +158,8 @@ export const FAQS: Faq[] = [
   { q: 'Does Resbrotherx build software for other companies?', a: 'Yes. For a website or mobile app delivered from a template or a Figma design, start with [Apsuni](/products/apsuni). For anything else, including AI, robotics and 3D work, use the [contact page](/contact).' },
   { q: 'Does Resbrotherx work on robotics?', a: 'Yes. Robotics is the newest lab at Resbrotherx. The work uses Arduino, Raspberry Pi and ESP32 boards to connect software to sensors and motors. See the [robotics lab](/labs/robotics).' },
   { q: 'Does Resbrotherx do 3D animation?', a: 'Yes. The team models, rigs, animates and renders in Blender, and builds 3D that runs in the browser. See the [3D and animation lab](/labs/3d-animation).' },
-  { q: 'Where is the documentation for Resbrotherx products?', a: 'Guides for each product are in the [documentation](/docs). The full AnimeDoc API reference is at animedoc.cloud/docs.' },
-  { q: 'How do I contact Resbrotherx?', a: 'Use the [contact page](/contact). For help with a specific product, write to that product\'s support address: support@apsuni.com for Apsuni and support@animedoc.cloud for AnimeDoc.' },
+  { q: 'Where is the documentation for Resbrotherx products?', a: 'Guides for each product are in the [documentation](/docs).' },
+  { q: 'How do I contact Resbrotherx?', a: 'Use the [contact page](/contact). For help with a specific product, write to that product\'s support address, such as support@apsuni.com for Apsuni.' },
   { q: 'How can I follow Resbrotherx?', a: 'Subscribe to the Resbrotherx channel on YouTube, follow the [blog](/blog), or add the RSS feed at /feed.xml to your reader.' },
   { q: 'Is Resbrotherx hiring?', a: 'There are no listed openings at the moment. People who work in AI, robotics, 3D, web or mobile engineering are welcome to introduce themselves through the [careers page](/careers).' },
 ]

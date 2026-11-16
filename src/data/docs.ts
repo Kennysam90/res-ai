@@ -3,105 +3,12 @@
 // it instead of copying it, so there is one source of truth.
 import type { Doc } from '../types'
 import { PRICES_AS_OF } from './products'
+import { SHOW_ANIMEDOC } from './site'
+import { ANIMEDOC_DOC } from './animedoc'
 
 const CHECKED = '2026-11-15'
 
-export const DOCS: Doc[] = [
-  {
-    slug: 'animedoc-api',
-    title: 'AnimeDoc API guide',
-    navTitle: 'AnimeDoc API',
-    description: 'An overview of the AnimeDoc REST API: base URL, authentication with X-API-Key, the endpoints, rate limits, errors and where to find the full reference.',
-    icon: 'iconoir-terminal',
-    updated: CHECKED,
-    product: 'animedoc',
-    body: [
-      { note: 'This is an overview. The complete reference, with every parameter and response field, an interactive console and an OpenAPI description, is at [animedoc.cloud/docs](https://animedoc.cloud/docs).' },
-      { h2: 'Overview' },
-      { p: 'The AnimeDoc API is a REST API that returns JSON. It gives your app, website or bot the same catalogue that powers [animedoc.cloud](https://animedoc.cloud): search, title details, episodes and playback sources.' },
-      { facts: [
-        ['Base URL', '`https://api.animedoc.cloud`'],
-        ['Format', 'JSON over HTTPS'],
-        ['Authentication', 'API key in the `X-API-Key` header'],
-        ['Machine-readable description', 'OpenAPI 3.1, published with the docs'],
-        ['Support', '[support@animedoc.cloud](mailto:support@animedoc.cloud)'],
-      ] },
-      { h2: 'Quick start' },
-      { ol: [
-        'Create a free account at [animedoc.cloud](https://animedoc.cloud) and press **Generate API key** on the Pricing page or in the Dashboard. The key works on the Free plan immediately.',
-        'Send the key in the `X-API-Key` header with every request to `https://api.animedoc.cloud`.',
-        'Search for a title, read its seasons with **Details**, then fetch an episode\'s sources with **Media sources**.',
-      ] },
-      { code: 'curl -X POST "https://api.animedoc.cloud/api/v2/anime/search/" \\\n  -H "X-API-Key: $ANIMEDOC_API_KEY" \\\n  -H "Content-Type: application/json" \\\n  -d \'{"keyword": "one piece", "page": 1, "perPage": 10}\'', title: 'Search the catalogue' },
-      { h2: 'Authentication' },
-      { ul: [
-        'Each account has **one API key**. Upgrading a plan changes the key\'s limits, not the key.',
-        'Keep the key on your own server. Anyone who has it can use your quota, so never put it in public app code.',
-        'If a key leaks, press **Regenerate** in the Dashboard. Your plan stays the same.',
-        'The website login is separate: watching on animedoc.cloud needs no key, but your own app, server or script always does.',
-      ] },
-      { h2: 'Endpoints' },
-      { table: {
-        head: ['Endpoint', 'Method', 'Purpose'],
-        rows: [
-          ['Home feed', 'GET', 'Banners and ready-made catalogue rows in one call'],
-          ['Section', 'GET', 'A ready-made page for one section, or that section\'s filtered list'],
-          ['Trending', 'GET', 'What people are watching now'],
-          ['Browse', 'GET', 'A channel sorted by latest, most popular or top rated, optionally filtered by genre and country'],
-          ['Search suggestions', 'POST', 'Autocomplete from a partial keyword'],
-          ['Search', 'POST', 'Full-text search with pagination (`keyword`, `page`, `perPage`)'],
-          ['Details', 'GET', 'Full metadata for one title, plus seasons and episode counts'],
-          ['Media sources', 'GET', 'Playable sources in several resolutions, and subtitle tracks'],
-          ['Stream proxy', 'GET', 'Streams a media source with byte-range support so players can seek'],
-        ],
-      } },
-      { p: 'Paths, parameters and example responses for each endpoint are in the [official reference](https://animedoc.cloud/docs).' },
-      { h2: 'Rate limits' },
-      { p: `Limits depend on the plan. These figures were published in ${PRICES_AS_OF}; the [pricing page](https://animedoc.cloud/pricing) is the source of truth.` },
-      { table: {
-        head: ['Plan', 'Per day', 'Per minute', 'Stream proxy'],
-        rows: [
-          ['Free', '20', '10', 'No'],
-          ['3-Day Pass', '2,000', '60', 'Yes'],
-          ['Starter', '3,000', '60', 'Yes'],
-          ['Pro', '20,000', '300', 'Yes'],
-          ['Business', '500,000+', '3,000', 'Yes'],
-        ],
-      } },
-      { ul: [
-        'Every response carries `X-RateLimit-Limit` and `X-RateLimit-Remaining` headers.',
-        'Going over a limit returns HTTP **429** with a `Retry-After` header.',
-        'Per-minute limits clear within a minute. Daily quotas reset at 00:00 UTC.',
-        'Every call counts as one request, whatever the endpoint. A video player fetches in chunks, so one playback through the stream proxy can use several requests.',
-        'Rejected requests (401, 403 and 429) do not count.',
-      ] },
-      { h2: 'Errors' },
-      { table: {
-        head: ['Status', 'Meaning', 'What to do'],
-        rows: [
-          ['401', 'The key is missing or not recognised', 'Check the `X-API-Key` header'],
-          ['403', 'The request is not permitted for this key', 'Check what your plan includes'],
-          ['429', 'A rate limit was reached', 'Wait for the time in `Retry-After`, then retry'],
-        ],
-      } },
-      { h2: 'Plans and commercial use' },
-      { ul: [
-        '**Free** is for personal use and prototypes, and must show "Powered by AnimeDoc".',
-        '**Starter** and the **3-Day Pass** are for personal and hobby projects.',
-        '**Pro** and **Business** may be used in commercial products.',
-        '**Business** includes a 99.9% monthly uptime commitment and custom limits on request.',
-        'Plans are one-time payments for a period and do not renew automatically. When a plan ends, the key keeps working on Free limits.',
-      ] },
-      { h2: 'Tutorials and tools' },
-      { ul: [
-        'Tutorials for a React streaming app, a React Native (Expo) app, a Discord bot and a Telegram bot: [animedoc.cloud/tutorials](https://animedoc.cloud/tutorials).',
-        'An interactive console to try requests with your own key.',
-        'An OpenAPI 3.1 description for code generators, and an `llms.txt` for AI coding assistants.',
-        'A usage dashboard on Pro and Business: requests over time, top endpoints and a CSV download.',
-      ] },
-      { cta: [{ label: 'Open the full reference', to: 'https://animedoc.cloud/docs' }, { label: 'About AnimeDoc', to: '/products/animedoc' }] },
-    ],
-  },
+const ALL_DOCS: Doc[] = [
   {
     slug: 'apsuni',
     title: 'Apsuni guide: from idea to a live website or app',
@@ -147,8 +54,6 @@ export const DOCS: Doc[] = [
         'Premium also includes Code to Figma and Image to Code.',
         'The result goes through the same human review as any other release.',
       ] },
-      { h2: 'Building a streaming site' },
-      { p: 'If you want a streaming site powered by the [AnimeDoc API](/docs/animedoc-api), AnimeDoc\'s "Build my website" form sends the job to Apsuni. You supply the brand, design, domain and a paid AnimeDoc API key.' },
       { h2: 'Getting help' },
       { ul: [
         'Email [support@apsuni.com](mailto:support@apsuni.com).',
@@ -312,5 +217,7 @@ export const DOCS: Doc[] = [
     ],
   },
 ]
+
+export const DOCS: Doc[] = SHOW_ANIMEDOC ? [ANIMEDOC_DOC, ...ALL_DOCS] : ALL_DOCS
 
 export const getDoc = (slug: string | undefined) => DOCS.find((d) => d.slug === slug)

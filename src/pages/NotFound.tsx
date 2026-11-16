@@ -22,7 +22,7 @@ export default function NotFound() {
           <CardGrid
             cols={4}
             items={[
-              { to: '/products', icon: 'iconoir-cube', title: 'Products', text: 'Apsuni, AnimeDoc, Adorė and Brainbox.', cta: 'Browse' },
+              { to: '/products', icon: 'iconoir-cube', title: 'Products', text: 'Apsuni, Adorė and Brainbox.', cta: 'Browse' },
               { to: '/services', icon: 'iconoir-tools', title: 'Services', text: 'AI, robotics, 3D, mobile, web and SaaS.', cta: 'Browse' },
               { to: '/docs', icon: 'iconoir-book', title: 'Documentation', text: 'Guides and API docs.', cta: 'Open' },
               { to: '/contact', icon: 'iconoir-mail', title: 'Contact', text: 'Ask us anything.', cta: 'Write' },

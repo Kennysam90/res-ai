@@ -433,24 +433,6 @@
     ],
     "alt": "The Apsuni about page: the better way to move from an idea to something real"
   },
-  "product-animedoc-docs": {
-    "w": 1280,
-    "h": 800,
-    "widths": [
-      640,
-      1280
-    ],
-    "alt": "The AnimeDoc API documentation, showing the quick start and endpoints"
-  },
-  "product-animedoc-pricing": {
-    "w": 1280,
-    "h": 800,
-    "widths": [
-      640,
-      1280
-    ],
-    "alt": "The AnimeDoc pricing page with Free, Starter, Pro and Business API plans"
-  },
   "product-adore": {
     "w": 1280,
     "h": 800,

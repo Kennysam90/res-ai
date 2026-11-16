@@ -84,8 +84,6 @@ export const PROJECTS: Project[] = [
 // Other public repositories, linked straight to GitHub. Described only by what
 // the repository itself shows.
 export const MORE_ON_GITHUB: RepoLink[] = [
-  { name: 'BEDC BillPay Mobile App', text: 'A bill-payment mobile app for iOS and Android, written in TypeScript with React Native.', url: `${GH}/BEDC-BillPay-Mobile-App`, tags: ['React Native', 'TypeScript'] },
-  { name: 'Crowdfunding Mobile App', text: 'A crowdfunding app for iOS and Android, written in TypeScript with React Native.', url: `${GH}/Crowdfunding-mobile-app`, tags: ['React Native', 'TypeScript'] },
   { name: 'Brainbox (Spres AI Agent)', text: 'SDKs and backend design for an AI operations platform. See the Brainbox product page.', url: `${GH}/Spres-Ai-Agent`, tags: ['TypeScript', 'Python', 'AI'] },
   { name: 'Management Analytical Dashboard', text: 'A dashboard for management reporting and analytics.', url: `${GH}/management_analytical_dashboard`, tags: ['JavaScript'] },
   { name: 'Boutique Store API', text: 'A backend API for an online boutique.', url: `${GH}/boutique-store-api`, tags: ['JavaScript', 'API'] },

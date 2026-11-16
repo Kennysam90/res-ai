@@ -3,10 +3,12 @@
 // the source of truth and each page says so.
 
 import type { Product } from '../types'
+import { SHOW_ANIMEDOC } from './site'
+import { ANIMEDOC_PRODUCT } from './animedoc'
 
 export const PRICES_AS_OF = 'November 2026'
 
-export const PRODUCTS: Product[] = [
+const ALL_PRODUCTS: Product[] = [
   {
     slug: 'apsuni',
     name: 'Apsuni',
@@ -66,7 +68,6 @@ export const PRODUCTS: Product[] = [
         'A mobile app for iOS and Android from an app template.',
         'A product built from your own Figma design, converted into real code.',
         'APIs with documentation for the product behind your site or app.',
-        'A streaming site powered by the [AnimeDoc API](/products/animedoc): AnimeDoc\'s "Build my website" service is delivered by Apsuni.',
       ] },
       { h2: 'Plans' },
       { p: `Apsuni sells one-time plans priced in Nigerian naira. The figures below were published on apsuni.com in ${PRICES_AS_OF}; check [apsuni.com](https://apsuni.com) for current plans.` },
@@ -87,99 +88,6 @@ export const PRODUCTS: Product[] = [
       { q: 'Who owns Apsuni?', a: 'Apsuni is owned and operated by Resbrotherx. Patrick Francis Ugochukwu, the founder and CEO of Resbrotherx, is the CEO of Apsuni.' },
       { q: 'Can Apsuni build a mobile app as well as a website?', a: 'Yes. Apsuni offers website templates and mobile app templates for iOS and Android, and can also work from your own Figma design.' },
       { q: 'Does AI build everything?', a: 'No. AI organises the brief and speeds up the work, and human reviewers approve each release for product fit, quality and security.' },
-    ],
-  },
-  {
-    slug: 'animedoc',
-    name: 'AnimeDoc',
-    kicker: 'Streaming catalogue API',
-    tagline: 'A developer API for search, title details and playback, plus a site to watch on.',
-    menuLine: 'A streaming catalogue API for developers, and a site to watch on.',
-    summary:
-      'AnimeDoc is an anime and movie streaming API with search, details and playback endpoints, plus a site to watch anime online. Developers use the REST API to build streaming sites, apps and bots.',
-    seoTitle: 'AnimeDoc — Streaming Catalogue API for Developers | Resbrotherx',
-    metaDescription: 'AnimeDoc by Resbrotherx is a streaming catalogue REST API with search, details and playback endpoints, plus a website built on the same catalogue.',
-    category: 'DeveloperApplication',
-    platforms: 'Web, REST API',
-    status: 'Live',
-    url: 'https://animedoc.cloud',
-    cardImage: 'product-animedoc-docs',
-    images: ['product-animedoc-docs', 'product-animedoc-pricing'],
-    docs: '/docs/animedoc-api',
-    links: [
-      { label: 'Visit animedoc.cloud', url: 'https://animedoc.cloud' },
-      { label: 'API documentation', url: 'https://animedoc.cloud/docs' },
-      { label: 'Tutorials', url: 'https://animedoc.cloud/tutorials' },
-      { label: 'Pricing & API keys', url: 'https://animedoc.cloud/pricing' },
-    ],
-    sameAs: ['https://animedoc.cloud', 'https://www.youtube.com/@animedoc'],
-    facts: [
-      ['What it is', 'A REST API for a streaming catalogue, and a website built on the same catalogue'],
-      ['Website', '[animedoc.cloud](https://animedoc.cloud)'],
-      ['API base URL', '`https://api.animedoc.cloud`'],
-      ['Authentication', 'An API key sent in the `X-API-Key` header'],
-      ['Built and run by', 'Resbrotherx'],
-      ['Founder', '[Patrick Francis Ugochukwu](/founder)'],
-      ['Support', '[support@animedoc.cloud](mailto:support@animedoc.cloud)'],
-    ],
-    highlights: [
-      { icon: 'iconoir-search', title: 'Search and suggestions', text: 'Full-text catalogue search with pagination, plus autocomplete from a partial keyword.' },
-      { icon: 'iconoir-page', title: 'Title details', text: 'Full metadata for a title, with its seasons and episode counts, in one call.' },
-      { icon: 'iconoir-play', title: 'Playback sources', text: 'Playable sources in several resolutions and subtitle tracks for an episode or a movie.' },
-      { icon: 'iconoir-key', title: 'One key, clear limits', text: 'One API key per account. Upgrading changes the limits, not the key. Limits are returned with every response.' },
-      { icon: 'iconoir-terminal', title: 'Built for developers', text: 'An OpenAPI 3.1 description, an interactive console and tutorials for React, React Native, Discord and Telegram.' },
-      { icon: 'iconoir-stats-up-square', title: 'Usage dashboard', text: 'Pro and Business plans include request charts, top endpoints and a CSV download.' },
-    ],
-    body: [
-      { h2: 'Two products on one catalogue' },
-      { p: '**AnimeDoc** is two things built on the same catalogue. The first is a website where people browse and watch. The second is the **AnimeDoc API**, a REST API for developers who want the same search, title details, episodes and playback inside their own app, website or bot.' },
-      { p: 'AnimeDoc is built and run by Resbrotherx. Its card payment page shows the Resbrotherx name, because Resbrotherx is the company that owns and operates it.' },
-      { h2: 'What the API covers' },
-      { table: {
-        head: ['Endpoint', 'Method', 'What it returns'],
-        rows: [
-          ['Home feed', 'GET', 'Banners and ready-made catalogue rows in one call'],
-          ['Section', 'GET', 'A ready-made page for one section, or that section\'s filtered list'],
-          ['Trending', 'GET', 'What people are watching now'],
-          ['Browse', 'GET', 'A channel sorted by latest, most popular or top rated, with optional genre and country filters'],
-          ['Search suggestions', 'POST', 'Autocomplete from a partial keyword'],
-          ['Search', 'POST', 'Full-text catalogue search with pagination'],
-          ['Details', 'GET', 'Full metadata for one title, plus seasons and episode counts'],
-          ['Media sources', 'GET', 'Playable sources in several resolutions and subtitle tracks'],
-          ['Stream proxy', 'GET', 'Streams a media source with byte-range support, so players can seek'],
-        ],
-      } },
-      { p: 'The full reference, with parameters and response fields for every endpoint, lives at [animedoc.cloud/docs](https://animedoc.cloud/docs). Our own [AnimeDoc API guide](/docs/animedoc-api) gives a short overview.' },
-      { h2: 'Plans and limits' },
-      { p: `Every plan is a one-time payment for a period: nothing renews automatically. These figures were published on animedoc.cloud in ${PRICES_AS_OF}; the [pricing page](https://animedoc.cloud/pricing) is the source of truth.` },
-      { table: {
-        head: ['Plan', 'Requests per day', 'Requests per minute', 'Price'],
-        rows: [
-          ['Free', '20', '10', '$0'],
-          ['3-Day Pass', '2,000', '60', '$1 for 3 days'],
-          ['Starter', '3,000', '60', '$12.99 per month'],
-          ['Pro', '20,000', '300', '$23.99 per month'],
-          ['Business', '500,000+', '3,000', 'From $109 per month'],
-        ],
-      } },
-      { h2: 'Using the website' },
-      { ul: [
-        'Sections with genre filters and trailers, and a search box that covers the whole catalogue.',
-        'A player with a choice of video quality, subtitles in several languages where available, autoplay and auto-next.',
-        'Continue watching: progress is saved in the browser, so you can pick up where you stopped.',
-        'Save for offline: store a video on the device and play it without a connection.',
-        'Light and dark themes, and a choice of site language.',
-        'It runs in any modern browser on phones, tablets and computers. Native mobile and desktop apps are planned.',
-      ] },
-      { h2: 'Want a site built for you?' },
-      { p: 'AnimeDoc\'s "Build my website" service is delivered by [Apsuni](/products/apsuni), its sister product at Resbrotherx: you choose the brand, design and domain, and Apsuni delivers the site.' },
-      { cta: [{ label: 'Read the API guide', to: '/docs/animedoc-api' }, { label: 'Visit AnimeDoc', to: 'https://animedoc.cloud' }] },
-    ],
-    faqs: [
-      { q: 'What is AnimeDoc?', a: 'AnimeDoc is an anime and movie streaming API with search, details and playback endpoints, plus a site to watch anime online. It is built and run by Resbrotherx.' },
-      { q: 'Who made AnimeDoc?', a: 'AnimeDoc is built by Resbrotherx, the technology company founded and led by Patrick Francis Ugochukwu.' },
-      { q: 'How do I get an AnimeDoc API key?', a: 'Sign in at animedoc.cloud, open Pricing or the Dashboard and press "Generate API key". The key works on the Free plan straight away. Send it in the X-API-Key header with every request.' },
-      { q: 'Why does the payment page say Resbrotherx?', a: 'Resbrotherx is the company that owns and runs AnimeDoc, so its name appears on the secure payment page and may appear on a bank statement.' },
     ],
   },
   {
@@ -318,5 +226,7 @@ export const PRODUCTS: Product[] = [
     ],
   },
 ]
+
+export const PRODUCTS: Product[] = SHOW_ANIMEDOC ? [ALL_PRODUCTS[0], ANIMEDOC_PRODUCT, ...ALL_PRODUCTS.slice(1)] : ALL_PRODUCTS
 
 export const getProduct = (slug: string | undefined) => PRODUCTS.find((p) => p.slug === slug)

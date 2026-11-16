@@ -25,7 +25,6 @@ export function organization(products: Product[] = []) {
     founder: founderRef,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: SITE.location.street,
       addressLocality: SITE.location.city,
       addressRegion: SITE.location.region,
       addressCountry: SITE.location.countryCode,

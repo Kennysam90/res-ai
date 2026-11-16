@@ -32,7 +32,7 @@ export default function Home() {
       seo={{
         title: 'Resbrotherx — AI, Robotics, 3D & Software Company',
         description:
-          'Resbrotherx builds AI, robotics, 3D animation and software. Founded by Patrick Francis Ugochukwu, it is the company behind Apsuni, AnimeDoc and Adorė.',
+          'Resbrotherx builds AI, robotics, 3D animation and software. Founded by Patrick Francis Ugochukwu, it is the company behind Apsuni and Adorė.',
         path: '/',
         jsonLd: [
           organization(PRODUCTS),
@@ -51,7 +51,7 @@ export default function Home() {
               <h5 className="section-subtitle">AI · Robotics · 3D · Software</h5>
               <h1 className="section-title fade-in">We build AI, robots and 3D worlds that ship.</h1>
               <p>
-                Resbrotherx is the technology company behind Apsuni, AnimeDoc and Adorė,
+                Resbrotherx is the technology company behind Apsuni and Adorė,
                 founded by {FOUNDER.name}.
               </p>
               <div className="btns-group d-flex">
@@ -93,14 +93,14 @@ export default function Home() {
                 <A to="/products" className="google-reviews-box simple-shadow bounce-in delay-3">
                   <div className="left">
                     <span>Live products</span>
-                    <strong className="rbx-big">3</strong>
+                    <strong className="rbx-big">2</strong>
                   </div>
                   <div className="right">
                     <div className="stars d-flex align-items-center rbx-dots" aria-hidden="true">
-                      <i /><i /><i />
+                      <i /><i />
                     </div>
                     <p>
-                      Apsuni · AnimeDoc
+                      Apsuni
                       <span> · Adorė</span>
                     </p>
                   </div>
@@ -168,7 +168,7 @@ export default function Home() {
           <SectionHeader
             kicker="What we're offering"
             title={<>AI, robotics, 3D and <br />software, under one roof.</>}
-            text="We build for ourselves first. Every service below is something we use in our own products, from AI try-on in Adorė to the API plans in AnimeDoc."
+            text="We build for ourselves first. Every service below is something we use in our own products, from AI try-on in Adorė to Figma to code in Apsuni."
           />
           <div className="services-list d-flex">
             {SERVICES.slice(0, 5).map((s, i) => (
@@ -288,7 +288,7 @@ export default function Home() {
                 <span className="platform-name rbx-platform">Our mission</span>
                 <h2 className="rbx-mission">{SITE.mission}</h2>
                 <p>
-                  Websites and apps with Apsuni, a streaming catalogue API with AnimeDoc and
+                  Websites and apps with Apsuni and
                   made-to-measure African fashion with Adorė. Next: robots and 3D.
                 </p>
                 <A to="/founder" className="author-box d-flex align-items-center">
@@ -414,26 +414,26 @@ export default function Home() {
           <div className="custom-row align-items-center">
             <div className="feature-left d-flex">
               <div className="feature-img-card" data-reveal>
-                <h3>One key, <br />clear limits, <br />real docs.</h3>
-                <Img name="product-animedoc-docs" alt="The AnimeDoc API documentation" sizes="(max-width: 900px) 50vw, 380px" />
+                <h3>Template <br />or Figma, <br />made live.</h3>
+                <Img name="product-apsuni" alt="Apsuni, which turns a template or a Figma design into a live website or app" sizes="(max-width: 900px) 50vw, 380px" />
               </div>
               <div className="feature-img-card" data-reveal>
-                <h3>Plans from <br />free to <br />business.</h3>
-                <Img name="product-animedoc-pricing" alt="AnimeDoc API plans" sizes="(max-width: 900px) 50vw, 380px" />
+                <h3>Clear plans, <br />priced <br />in naira.</h3>
+                <Img name="product-apsuni-about" alt="The Apsuni about page" sizes="(max-width: 900px) 50vw, 380px" />
               </div>
             </div>
             <div className="feature-right">
               <div className="feature-content" data-reveal>
                 <h5 className="section-subtitle">For developers</h5>
                 <h2 className="section-title">Documentation for everything we ship</h2>
-                <p>Guides for Apsuni, Adorė and Brainbox, and an overview of the AnimeDoc REST API.</p>
+                <p>Step-by-step guides for Apsuni and Adorė, and the design overview of Brainbox.</p>
                 <ul>
-                  <li><Icon name="iconoir-check" /> REST API with OpenAPI</li>
+                  <li><Icon name="iconoir-check" /> Plans and prices in each guide</li>
                   <li><Icon name="iconoir-check" /> Feeds and llms.txt</li>
                 </ul>
                 <div className="btns-group">
                   <A to="/docs" className="theme-simple-btn"><Icon name="iconoir-book" /> Read the docs</A>
-                  <A to="/docs/animedoc-api" className="theme-simple-btn"><Icon name="iconoir-terminal" /> AnimeDoc API guide</A>
+                  <A to="/docs/apsuni" className="theme-simple-btn"><Icon name="iconoir-page" /> Apsuni guide</A>
                 </div>
               </div>
             </div>

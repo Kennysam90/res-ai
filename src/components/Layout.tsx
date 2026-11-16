@@ -245,7 +245,7 @@ function Header() {
                         </div>
                         <div className="right">
                           <div className="mega-menu-ads">
-                            <Img name="product-animedoc-docs" sizes="340px" alt="" />
+                            <Img name="code" sizes="340px" alt="" />
                             <h2>Developer docs</h2>
                             <p>APIs and guides for everything we ship.</p>
                             <A to="/docs">Open the docs</A>
@@ -442,8 +442,8 @@ function Footer() {
                 <p><A href={SITE.phoneHref}>{SITE.phone}</A></p>
               </div>
               <div className="footer-contact-info-item">
-                <h4>Address</h4>
-                <p>{SITE.location.street}, {SITE.location.city}, {SITE.location.region}, {SITE.location.country}</p>
+                <h4>Based in</h4>
+                <p>{SITE.location.city}, {SITE.location.region}, {SITE.location.country}</p>
               </div>
             </div>
           </div>

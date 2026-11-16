@@ -8,6 +8,7 @@ import { SERVICES, getService } from '../data/services'
 import { LABS, getLab } from '../data/labs'
 import { PROJECTS, MORE_ON_GITHUB, GITHUB_PROFILE, getProject } from '../data/projects'
 import { TECH } from '../data/company'
+import { SITE } from '../data/site'
 import { breadcrumbs, webPage, software, service as serviceSchema, faqPage, orgRef } from '../seo/schema'
 import type { Feature } from '../types'
 
@@ -29,12 +30,12 @@ const FeatureGrid = ({ items }: { items: Feature[] }) => (
 
 export function Products() {
   const path = '/products'
-  const description = 'The software Resbrotherx builds and runs: Apsuni for websites and apps, AnimeDoc for developers, Adorė for made-to-measure fashion, and Brainbox in development.'
+  const description = 'The software Resbrotherx builds and runs: Apsuni for websites and apps, Adorė for made-to-measure fashion, and Brainbox in development.'
   return (
     <Page
       className="portfolio-page"
       seo={{
-        title: 'Resbrotherx Products — Apsuni, AnimeDoc, Adorė and Brainbox',
+        title: 'Resbrotherx Products — Apsuni, Adorė and Brainbox',
         description,
         path,
         jsonLd: [
@@ -71,7 +72,7 @@ export function Products() {
       </section>
       <section className="rbx-section is-tint">
         <div className="custom-container">
-          <SectionHeader kicker="For developers" title="Documentation" text="Guides for every product, and an overview of the AnimeDoc REST API." />
+          <SectionHeader kicker="For developers" title="Documentation" text="Step-by-step guides for every product we ship." />
           <CardGrid cols={4} items={PRODUCTS.map((p) => ({ to: p.docs, icon: 'iconoir-book', title: `${p.name} docs`, text: p.menuLine, cta: 'Open guide' }))} />
         </div>
       </section>
@@ -199,6 +200,20 @@ export function Services() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+      <section className="rbx-section" id="pricing">
+        <div className="custom-container">
+          <div className="rbx-prose rbx-narrow" data-reveal>
+            <h2>How pricing works</h2>
+            <ol>
+              <li><strong>Tell us what you need.</strong> Use the <A to="/contact">contact page</A> or write to <A href={`mailto:${SITE.email}`}>{SITE.email}</A>.</li>
+              <li><strong>Get a written quote.</strong> Every project is priced in Nigerian naira (₦) before you pay anything. The quote lists what is delivered, the price and the dates.</li>
+              <li><strong>Pay securely.</strong> Usually a deposit to start and the balance at agreed milestones, by card, bank transfer or USSD through our payment provider. You get a receipt for every payment.</li>
+              <li><strong>Receive the work.</strong> We deliver what the quote describes. If something does not match, we fix it.</li>
+            </ol>
+            <p>For a website or mobile app from a template or a Figma design, <A to="/products/apsuni">Apsuni</A> has fixed plans with prices shown up front. Refunds and cancellations are covered by our <A to="/refunds">payments and refund policy</A>.</p>
+          </div>
         </div>
       </section>
       <Cta title="Not sure which one you need?" text="Describe the result you want and we will tell you what it takes." label="Ask us" />

@@ -23,14 +23,14 @@ const ABOUT_FACTS: [string, string][] = [
   ['Registered', `${SITE.registration.dateText}, ${SITE.registration.body}`],
   ['Based in', `${SITE.location.city}, ${SITE.location.region}, ${SITE.location.country}`],
   ['Fields', 'Artificial intelligence, robotics, 3D animation, software'],
-  ['Products', '[Apsuni](/products/apsuni), [AnimeDoc](/products/animedoc), [Adorė](/products/adore), [Brainbox](/products/brainbox) (in development)'],
+  ['Products', '[Apsuni](/products/apsuni), [Adorė](/products/adore), [Brainbox](/products/brainbox) (in development)'],
   ['Website', '[www.resbrotherx.com](https://www.resbrotherx.com/)'],
 ]
 
 const ABOUT_BODY: Block[] = [
   { h2: 'What Resbrotherx is' },
   { p: `**Resbrotherx** is a technology company founded and led by [${FOUNDER.name}](/founder). It builds and runs its own products, and it works in four fields: artificial intelligence, robotics, 3D animation and software.` },
-  { p: 'The company owns three products that are live today. [Apsuni](/products/apsuni) turns a template or a Figma design into a live website or mobile app. [AnimeDoc](/products/animedoc) is a streaming catalogue API for developers, with a website on the same catalogue. [Adorė](/products/adore) sells made-to-measure African fashion with AI try-on. A fourth, [Brainbox](/products/brainbox), is in development.' },
+  { p: 'The company owns two products that are live today. [Apsuni](/products/apsuni) turns a template or a Figma design into a live website or mobile app. [Adorė](/products/adore) sells made-to-measure African fashion with AI try-on. A third, [Brainbox](/products/brainbox), is in development.' },
   { h2: 'How it started' },
   { p: `The name came first. ${FOUNDER.name} has published software as Resbrotherx since 2020, when he opened a GitHub account under that name. Websites, dashboards, APIs and mobile apps followed, many of them [still public](/portfolio).` },
   { p: `In ${SITE.registration.dateText} the name was made formal: **${SITE.legalName}** was registered as a business name with the ${SITE.registration.body}, for computer programming, consultancy and related activities. The company is based in ${SITE.location.city}, ${SITE.location.region}.` },
@@ -53,17 +53,17 @@ export function About() {
     <Page
       className="about-page"
       seo={{
-        title: 'About Resbrotherx — The Company Behind Apsuni, AnimeDoc and Adorė',
+        title: 'About Resbrotherx — The Company Behind Apsuni and Adorė',
         description,
         path,
         jsonLd: [organization(PRODUCTS), person(), webPage({ path, name: 'About Resbrotherx', description, type: 'AboutPage', about: orgRef }), breadcrumbs([{ name: 'About', path }])],
       }}
     >
-      <PageHero kicker="Company" title="The company behind Apsuni, AnimeDoc and Adorė" text={SITE.mission} crumbs={[{ name: 'About', path }]}>
+      <PageHero kicker="Company" title="The company behind Apsuni and Adorė" text={SITE.mission} crumbs={[{ name: 'About', path }]}>
         <div className="hero-company-boxes">
           {[
             [String(SITE.foundedYear), 'Building since', 'Software published under the Resbrotherx name.'],
-            ['3', 'Live products', 'Apsuni, AnimeDoc and Adorė.'],
+            ['2', 'Live products', 'Apsuni and Adorė.'],
             ['4', 'Fields', 'AI, robotics, 3D and software.'],
             ['8', 'Teams', 'From research to customer support.'],
           ].map(([n, t, d]) => (
@@ -165,10 +165,10 @@ function FounderStrip() {
 /* ---------------------------------------------------------------- Founder */
 
 const FOUNDER_FAQS: Faq[] = [
-  { q: 'Who is Patrick Francis Ugochukwu?', a: 'Patrick Francis Ugochukwu is a software engineer and the founder and chief executive officer of Resbrotherx, the technology company behind Apsuni, AnimeDoc and Adorė. He is also the CEO of Apsuni.' },
+  { q: 'Who is Patrick Francis Ugochukwu?', a: 'Patrick Francis Ugochukwu is a software engineer and the founder and chief executive officer of Resbrotherx, the technology company behind Apsuni and Adorė. He is also the CEO of Apsuni.' },
   { q: 'Who is the founder of Resbrotherx?', a: 'Resbrotherx was founded by Patrick Francis Ugochukwu, who leads the company as its CEO.' },
   { q: 'Is Francis Patrick Ugochukwu the same person as Patrick Francis Ugochukwu?', a: 'Yes. His name is written Patrick Francis Ugochukwu. He is also referred to as Patrick Ugochukwu, Francis Patrick Ugochukwu and Patrick Francis.' },
-  { q: 'What software has Patrick Francis Ugochukwu developed?', a: 'He founded and built Apsuni (websites and mobile apps built, hosted and deployed), AnimeDoc (a streaming catalogue API and website) and Adorė (made-to-measure African fashion with AI try-on). His public GitHub account also holds e-commerce and content APIs, mobile apps written with React Native, dashboards and a server monitoring tool.' },
+  { q: 'What software has Patrick Francis Ugochukwu developed?', a: 'He founded and built Apsuni (websites and mobile apps built, hosted and deployed) and Adorė (made-to-measure African fashion with AI try-on). His public GitHub account also holds e-commerce and content APIs, mobile apps written with React Native, dashboards and a server monitoring tool.' },
   { q: 'What is Patrick Francis Ugochukwu working on now?', a: 'He leads Resbrotherx\'s work on AI assistants and agents, including Brainbox, an AI operations platform in development, along with the company\'s newer work in robotics with Arduino and Raspberry Pi and in 3D animation with Blender.' },
   { q: 'What technologies does he work with?', a: 'Python and Django, JavaScript and TypeScript, React, React Native and Node.js, with Blender for 3D and Arduino and Raspberry Pi for robotics.' },
   { q: 'How can I contact Patrick Francis Ugochukwu?', a: 'For press, partnerships and speaking requests, use the [Resbrotherx contact page](/contact).' },
@@ -176,13 +176,12 @@ const FOUNDER_FAQS: Faq[] = [
 
 const FOUNDER_BODY: Block[] = [
   { h2: 'Biography' },
-  { p: `**${FOUNDER.name}** is a software engineer and the founder and chief executive officer of **Resbrotherx**, the technology company behind [Apsuni](/products/apsuni), [AnimeDoc](/products/animedoc) and [Adorė](/products/adore). He is also the chief executive of Apsuni.` },
+  { p: `**${FOUNDER.name}** is a software engineer and the founder and chief executive officer of **Resbrotherx**, the technology company behind [Apsuni](/products/apsuni) and [Adorė](/products/adore). He is also the chief executive of Apsuni.` },
   { p: `He is also known as **${FOUNDER.shortName}** and **Francis Patrick Ugochukwu**. He began publishing software under the Resbrotherx name in ${FOUNDER.githubSince}, and registered ${SITE.legalName} as a business in Nigeria in ${SITE.registration.dateText}. The company is based in ${SITE.location.city}, ${SITE.location.region}.` },
   { h2: 'What he has built' },
   { p: 'Patrick founded each of the Resbrotherx products and leads their development:' },
   { ul: [
     '**[Apsuni](/products/apsuni)**: turns a website template or a Figma design into a live, branded website or mobile app, built, hosted and deployed for the customer. He is its CEO.',
-    '**[AnimeDoc](/products/animedoc)**: a streaming catalogue API for developers, with search, details and playback endpoints, and a website built on the same catalogue.',
     '**[Adorė](/products/adore)**: a boutique for made-to-measure African fashion, with AI try-on and designs that can be viewed in 3D.',
     '**[Brainbox](/products/brainbox)**: an AI operations platform, in development, in which AI agents analyse logs and query data through read-only, audited access.',
   ] },
@@ -198,7 +197,7 @@ const FOUNDER_BODY: Block[] = [
     '**AI that acts.** Assistants and agents that do real tasks inside products, with clear limits and a person approving what matters. See the [AI lab](/labs/ai).',
     '**Robotics.** Connecting software to sensors and motors with Arduino, Raspberry Pi and ESP32. See the [robotics lab](/labs/robotics).',
     '**3D and animation.** 3D characters, models and animation made in Blender, and 3D inside products. See the [3D lab](/labs/3d-animation).',
-    '**The products.** Continuing to build Apsuni, AnimeDoc and Adorė.',
+    '**The products.** Continuing to build Apsuni and Adorė.',
   ] },
   { h2: 'Skills and tools' },
   { p: `He works across the stack: ${FOUNDER.skills.join(', ')}. For 3D he uses Blender, and for robotics Arduino and Raspberry Pi.` },
@@ -206,13 +205,13 @@ const FOUNDER_BODY: Block[] = [
 
 export function Founder() {
   const path = '/founder'
-  const description = 'Patrick Francis Ugochukwu is a software engineer and the founder and CEO of Resbrotherx, the company behind Apsuni, AnimeDoc and Adorė. Biography and work.'
+  const description = 'Patrick Francis Ugochukwu is a software engineer and the founder and CEO of Resbrotherx, the company behind Apsuni and Adorė. Biography and work.'
   const facts: [string, string][] = [
     ['Full name', FOUNDER.name],
     ['Also known as', FOUNDER.altNames.slice(0, 2).join(', ')],
     ['Occupation', 'Software engineer, entrepreneur'],
     ['Title', 'Founder and CEO of Resbrotherx; CEO of Apsuni'],
-    ['Known for', 'Founding Resbrotherx; Apsuni, AnimeDoc and Adorė'],
+    ['Known for', 'Founding Resbrotherx; Apsuni and Adorė'],
     ['Active since', '2020'],
     ['Company', `[Resbrotherx](/about)`],
     ['GitHub', `[resbrotherx](${FOUNDER.github})`],
@@ -237,7 +236,7 @@ export function Founder() {
       <PageHero
         kicker="Founder & CEO"
         title={FOUNDER.name}
-        text="Software engineer. Founder and chief executive of Resbrotherx, the company behind Apsuni, AnimeDoc and Adorė."
+        text="Software engineer. Founder and chief executive of Resbrotherx, the company behind Apsuni and Adorė."
         crumbs={[{ name: 'About', path: '/about' }, { name: 'Founder', path }]}
       />
       <section className="rbx-section">
@@ -401,9 +400,9 @@ export function Careers() {
 
 /* ------------------------------------------------------------------ Press */
 
-const BOILERPLATE_SHORT = 'Resbrotherx is a technology company founded by Patrick Francis Ugochukwu. It builds AI applications, robotics, 3D animation and software, and is the company behind Apsuni, AnimeDoc and Adorė.'
+const BOILERPLATE_SHORT = 'Resbrotherx is a technology company founded by Patrick Francis Ugochukwu. It builds AI applications, robotics, 3D animation and software, and is the company behind Apsuni and Adorė.'
 
-const BOILERPLATE_LONG = `Resbrotherx is a technology company based in ${SITE.location.city}, ${SITE.location.country}, founded and led by Patrick Francis Ugochukwu. The company builds and runs its own products: Apsuni, which turns a template or a Figma design into a live website or mobile app; AnimeDoc, a streaming catalogue API for developers with a website on the same catalogue; and Adorė, a platform for made-to-measure African fashion with AI try-on. Resbrotherx works in four fields: artificial intelligence, robotics, 3D animation and software. Its founder has published software under the Resbrotherx name since 2020, and ${SITE.legalName} was registered as a business name with the ${SITE.registration.body} in ${SITE.registration.dateText}.`
+const BOILERPLATE_LONG = `Resbrotherx is a technology company based in ${SITE.location.city}, ${SITE.location.country}, founded and led by Patrick Francis Ugochukwu. The company builds and runs its own products: Apsuni, which turns a template or a Figma design into a live website or mobile app, and Adorė, a platform for made-to-measure African fashion with AI try-on. Resbrotherx works in four fields: artificial intelligence, robotics, 3D animation and software. Its founder has published software under the Resbrotherx name since 2020, and ${SITE.legalName} was registered as a business name with the ${SITE.registration.body} in ${SITE.registration.dateText}.`
 
 export function Press() {
   const path = '/press'
@@ -427,7 +426,7 @@ export function Press() {
       'The company is **Resbrotherx**, one word. It is also written **ResBrotherX**. The registered business name is **Resbrotherx Technologies**.',
       `The founder is **${FOUNDER.name}**. On second mention, **Ugochukwu** or **Patrick Ugochukwu**.`,
       '**Adorė** is written with an ė. Where that is not possible, **Adore** is acceptable.',
-      '**AnimeDoc** and **Apsuni** are each one word.',
+      '**Apsuni** is one word.',
     ] },
     { h2: 'Timeline' },
     { table: {
@@ -435,7 +434,7 @@ export function Press() {
       rows: [
         ['May 2020', 'Patrick Francis Ugochukwu begins publishing software on GitHub under the name Resbrotherx.'],
         ['2020 onwards', 'Websites, APIs, dashboards and mobile apps are published under the name.'],
-        ['By 2026', 'Apsuni, AnimeDoc and Adorė are live as Resbrotherx products.'],
+        ['By 2026', 'Apsuni and Adorė are live as Resbrotherx products.'],
         [SITE.registration.dateText, `${SITE.legalName} is registered as a business name with the ${SITE.registration.body}.`],
         [SITE.registration.dateText, 'The company website, resbrotherx.com, is published.'],
       ],
@@ -444,7 +443,7 @@ export function Press() {
     { p: 'Each fact on this page can be checked against a primary source:' },
     { ul: [
       'Company registration: the public register of the Corporate Affairs Commission of Nigeria.',
-      'Products and ownership: [apsuni.com/founder](https://apsuni.com/founder), [animedoc.cloud/founder](https://animedoc.cloud/founder) and [adorė.com](https://xn--ador-yva.com).',
+      'Products and ownership: [apsuni.com/founder](https://apsuni.com/founder) and [adorė.com](https://xn--ador-yva.com).',
       'Public code and its dates: [github.com/resbrotherx](https://github.com/resbrotherx).',
     ] },
     { h2: 'Using our name and logo' },
