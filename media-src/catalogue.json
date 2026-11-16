@@ -1,0 +1,376 @@
+[
+ {
+  "slug": "arduino-uno",
+  "file": "arduino-uno.jpg",
+  "alt": "Close-up of an Arduino Uno microcontroller board",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Arduino Uno board.jpg",
+   "author": "JrawX",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source": "https://commons.wikimedia.org/wiki/File:Arduino_Uno_board.jpg"
+  }
+ },
+ {
+  "slug": "raspberry-pi",
+  "file": "raspberry-pi.jpg",
+  "alt": "A Raspberry Pi 4 single-board computer",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Raspberry Pi 4 Model B - Side.jpg",
+   "author": "Laserlicht",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Side.jpg"
+  }
+ },
+ {
+  "slug": "raspberry-pi-5",
+  "file": "raspberry-pi-5.jpg",
+  "alt": "Top view of a Raspberry Pi 5 board",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Raspberry Pi 5.jpg",
+   "author": "SimonWaldherr",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Raspberry_Pi_5.jpg"
+  }
+ },
+ {
+  "slug": "robot-arm",
+  "file": "robot-arm.jpg",
+  "alt": "A robotic arm working in orbit with an astronaut attached",
+  "ratio": 1.5,
+  "credit": {
+   "title": "STS-114 Steve Robinson on Canadarm2.jpg",
+   "author": "NASA",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "source": "https://commons.wikimedia.org/wiki/File:STS-114_Steve_Robinson_on_Canadarm2.jpg"
+  }
+ },
+ {
+  "slug": "drone",
+  "file": "drone.jpg",
+  "alt": "A quadcopter drone in flight",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Quadcopter camera drone in flight.jpg",
+   "author": "Josh Sorenson",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source": "https://commons.wikimedia.org/wiki/File:Quadcopter_camera_drone_in_flight.jpg"
+  }
+ },
+ {
+  "slug": "electronics",
+  "file": "electronics.jpg",
+  "alt": "Macro photo of capacitors and resistors on a circuit board",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Ibanez TS9 Tube Screamer effect pedal, closeup of PCB (14478282874).jpg",
+   "author": "Mercado Viagens from Brasil",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ibanez_TS9_Tube_Screamer_effect_pedal,_closeup_of_PCB_(14478282874).jpg"
+  }
+ },
+ {
+  "slug": "workbench",
+  "file": "workbench.jpg",
+  "alt": "An electronics workbench with test equipment and tools",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Electronics workbench.jpg",
+   "author": "James Bastow",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Electronics_workbench.jpg"
+  }
+ },
+ {
+  "slug": "3d-printing",
+  "file": "3d-printing.jpg",
+  "alt": "A row of desktop 3D printers in a workshop",
+  "ratio": 1.5,
+  "credit": {
+   "title": "3D printer farm at Hackerspace Wrocław.jpg",
+   "author": "Majabojarska",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:3D_printer_farm_at_Hackerspace_Wroc%C5%82aw.jpg"
+  }
+ },
+ {
+  "slug": "render-cube",
+  "file": "render-cube.jpg",
+  "alt": "A glowing translucent cube rendered in Blender",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Labyrinth-Würfel in Blender-Cycles.png",
+   "author": "Cuculuc",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Labyrinth-W%C3%BCrfel_in_Blender-Cycles.png"
+  }
+ },
+ {
+  "slug": "render-product",
+  "file": "render-product.jpg",
+  "alt": "A photorealistic product render of a turntable made in Blender",
+  "ratio": 1.5,
+  "credit": {
+   "title": "McIntosh MT5 turntable rendered in Blender.png",
+   "author": "Sebastian Włoszek",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:McIntosh_MT5_turntable_rendered_in_Blender.png"
+  }
+ },
+ {
+  "slug": "3d-character",
+  "file": "3d-character.jpg",
+  "alt": "Front, side and back views of a stylised 3D character model",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Spring-concept art-Spring.png",
+   "author": "Uploaded by Julien Kaspar/Blender Foundation",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Spring-concept_art-Spring.png"
+  }
+ },
+ {
+  "slug": "3d-animation-dog",
+  "file": "3d-animation-dog.jpg",
+  "alt": "A rendered frame of a 3D animated dog in the snow",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Spring-concept art-Autumn 02.png",
+   "author": "Uploaded by Andy Goralczyk/Blender Foundation",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Spring-concept_art-Autumn_02.png"
+  }
+ },
+ {
+  "slug": "3d-animation-scene",
+  "file": "3d-animation-scene.jpg",
+  "alt": "A rendered frame from a 3D animated film made in Blender",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Sprite Fright-concept art-Phil 01.png",
+   "author": "Blender Foundation",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Sprite_Fright-concept_art-Phil_01.png"
+  }
+ },
+ {
+  "slug": "3d-topology",
+  "file": "3d-topology.jpg",
+  "alt": "Wireframe topology of a 3D head model",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Sintel-face-morph.png",
+   "author": "Sintel model by Angela Guenette simplified Sintel rig by Ben Dansie render by Fama Clamosa",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Sintel-face-morph.png"
+  }
+ },
+ {
+  "slug": "blender-suzanne",
+  "file": "blender-suzanne.jpg",
+  "alt": "Blender's Suzanne monkey head rendered in amber and glass",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Two Suzanne heads.jpg",
+   "author": "GrinningIodize",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source": "https://commons.wikimedia.org/wiki/File:Two_Suzanne_heads.jpg"
+  }
+ },
+ {
+  "slug": "wireframe",
+  "file": "wireframe.jpg",
+  "alt": "A green wireframe view of 3D shapes",
+  "ratio": 1.5,
+  "credit": {
+   "title": "GreenWireframeObjectsRenderedInBlender'sEeveeEngine.png",
+   "author": "Aluminum-001",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source": "https://commons.wikimedia.org/wiki/File:GreenWireframeObjectsRenderedInBlender%27sEeveeEngine.png"
+  }
+ },
+ {
+  "slug": "motion-capture",
+  "file": "motion-capture.jpg",
+  "alt": "A motion capture session shown on a workstation screen",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Body Motion Capture.jpg",
+   "author": "Raíssa Ruschel",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Body_Motion_Capture.jpg"
+  }
+ },
+ {
+  "slug": "servers",
+  "file": "servers.jpg",
+  "alt": "An aisle of server racks in a data centre",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Racks Amravati Data Center.jpg",
+   "author": "PiDatacenters",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Racks_Amravati_Data_Center.jpg"
+  }
+ },
+ {
+  "slug": "humanoid-robot",
+  "file": "humanoid-robot.jpg",
+  "alt": "A small humanoid robot balancing in a dynamic pose",
+  "ratio": 1.5,
+  "credit": {
+   "title": "NAO mars 2011 1.jpg",
+   "author": "Nicolas Richoffer",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:NAO_mars_2011_1.jpg"
+  }
+ },
+ {
+  "slug": "code",
+  "file": "code.jpg",
+  "alt": "Source code on a computer screen",
+  "ratio": 1.5,
+  "credit": {
+   "title": "CSS code on a screen (Unsplash).jpg",
+   "author": "Sai Kiran Anagani _imkiran",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source": "https://commons.wikimedia.org/wiki/File:CSS_code_on_a_screen_(Unsplash).jpg"
+  }
+ },
+ {
+  "slug": "led-matrix",
+  "file": "led-matrix.jpg",
+  "alt": "An Arduino board driving an LED matrix",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Monome 256 controlling Arduino fake flamethrower.jpg",
+   "author": "soundcyst",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Monome_256_controlling_Arduino_fake_flamethrower.jpg"
+  }
+ },
+ {
+  "slug": "breadboard",
+  "file": "breadboard.jpg",
+  "alt": "A breadboard circuit wired to a microcontroller",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Lamp controller & Arduino (3133281002).jpg",
+   "author": "Felipe Sanches from São Paulo, Brazil",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Lamp_controller_%26_Arduino_(3133281002).jpg"
+  }
+ },
+ {
+  "slug": "enugu",
+  "file": "enugu.jpg",
+  "alt": "Aerial view of Enugu, Nigeria",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Enugu Nigeria.jpg",
+   "author": "DeStrangeImages",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Enugu_Nigeria.jpg"
+  }
+ },
+ {
+  "slug": "rover",
+  "file": "rover.jpg",
+  "alt": "A six-wheeled planetary rover",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Perseverance rover design.png",
+   "author": "NASA",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "source": "https://commons.wikimedia.org/wiki/File:Perseverance_rover_design.png"
+  }
+ },
+ {
+  "slug": "esp32",
+  "file": "esp32.jpg",
+  "alt": "Macro photo of an ESP32 wireless microcontroller chip",
+  "ratio": 1.5,
+  "credit": {
+   "title": "ESP32 on Lolin32 Lite clone board cropped.jpg",
+   "author": "Ubahnverleih",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source": "https://commons.wikimedia.org/wiki/File:ESP32_on_Lolin32_Lite_clone_board_cropped.jpg"
+  }
+ },
+ {
+  "slug": "animation-viewport",
+  "file": "animation-viewport.jpg",
+  "alt": "A 3D animation scene open in the Blender viewport",
+  "ratio": 1.5,
+  "credit": {
+   "title": "Origami Animation Designed on Apple Mac Pro, Rendered in the Cloud (2).jpg",
+   "author": "Intel Free Press",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Origami_Animation_Designed_on_Apple_Mac_Pro,_Rendered_in_the_Cloud_(2).jpg"
+  }
+ },
+ {
+  "slug": "product-apsuni",
+  "file": "product-apsuni.png",
+  "alt": "The Apsuni home page: turn the next big idea into a release people trust",
+  "ratio": 1.6
+ },
+ {
+  "slug": "product-apsuni-about",
+  "file": "product-apsuni-about.png",
+  "alt": "The Apsuni about page: the better way to move from an idea to something real",
+  "ratio": 1.6
+ },
+ {
+  "slug": "product-animedoc-docs",
+  "file": "product-animedoc-docs.png",
+  "alt": "The AnimeDoc API documentation, showing the quick start and endpoints",
+  "ratio": 1.6
+ },
+ {
+  "slug": "product-animedoc-pricing",
+  "file": "product-animedoc-pricing.png",
+  "alt": "The AnimeDoc pricing page with Free, Starter, Pro and Business API plans",
+  "ratio": 1.6
+ },
+ {
+  "slug": "product-adore",
+  "file": "product-adore.png",
+  "alt": "The Adorė home page: made-to-measure African fashion",
+  "ratio": 1.6
+ },
+ {
+  "slug": "product-adore-tryon",
+  "file": "product-adore-tryon.png",
+  "alt": "The Adorė AI fashion try-on page explaining how try-on works",
+  "ratio": 1.6
+ }
+]

@@ -1,0 +1,23 @@
+/* Fonts are hosted with the site (no request to another server). The latin-ext
+   files carry letters such as the "ė" in Adorė and are only downloaded by pages that use them. */
+@import '@fontsource/dm-sans/latin-300.css';
+@import '@fontsource/dm-sans/latin-400.css';
+@import '@fontsource/dm-sans/latin-500.css';
+@import '@fontsource/dm-sans/latin-700.css';
+@import '@fontsource/dm-sans/latin-ext-400.css';
+@import '@fontsource/dm-sans/latin-ext-500.css';
+@import '@fontsource/yantramanav/latin-400.css';
+@import '@fontsource/yantramanav/latin-500.css';
+@import '@fontsource/yantramanav/latin-700.css';
+@import '@fontsource/yantramanav/latin-ext-500.css';
+@import '@fontsource/yantramanav/latin-ext-700.css';
+@import '@fontsource/syne/latin-500.css';
+
+/* The template. Its only edits: image paths, and big numbers no longer need to be <h1>. */
+@import './theme/bootstrap.min.css';
+@import './theme/style.css';
+@import './theme/responsive.css';
+
+/* Icons (generated: only the ones the site uses) and everything added for Resbrotherx. */
+@import './icons.css';
+@import './site.css';
