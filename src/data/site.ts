@@ -30,6 +30,7 @@ export const SITE = {
     natureOfBusiness: 'Computer programming, consultancy and related activities',
   },
   location: {
+    street: '647 Okpara Avenue',
     city: 'Enugu',
     region: 'Enugu State',
     country: 'Nigeria',
@@ -38,6 +39,9 @@ export const SITE = {
   // resbrotherx.com has no mailbox yet, so company mail goes to the Apsuni
   // inbox, which the same team reads. Change this line when hello@resbrotherx.com exists.
   email: 'support@apsuni.com',
+  // Business phone, the same number given to the payment provider.
+  phone: '+234 802 052 7701',
+  phoneHref: 'tel:+2348020527701',
   language: 'en',
   locale: 'en_NG',
 }
@@ -123,6 +127,7 @@ export const NAV = {
   legal: [
     { label: 'Privacy', to: '/privacy' },
     { label: 'Terms', to: '/terms' },
+    { label: 'Payments & refunds', to: '/refunds' },
     { label: 'Cookies', to: '/cookies' },
     { label: 'Image credits', to: '/credits' },
   ],

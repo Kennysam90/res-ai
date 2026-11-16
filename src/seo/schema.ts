@@ -25,12 +25,14 @@ export function organization(products: Product[] = []) {
     founder: founderRef,
     address: {
       '@type': 'PostalAddress',
+      streetAddress: SITE.location.street,
       addressLocality: SITE.location.city,
       addressRegion: SITE.location.region,
       addressCountry: SITE.location.countryCode,
     },
     email: SITE.email,
-    contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', email: SITE.email, availableLanguage: ['English'] }],
+    telephone: SITE.phone,
+    contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', email: SITE.email, telephone: SITE.phone, availableLanguage: ['English'] }],
     sameAs: sameAsOrg,
     knowsAbout: [
       'Artificial intelligence', 'AI applications', 'Robotics', 'Arduino', 'Raspberry Pi', '3D animation',

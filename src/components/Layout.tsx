@@ -438,8 +438,12 @@ function Footer() {
                 <p><A href={`mailto:${SITE.email}`}>{SITE.email}</A></p>
               </div>
               <div className="footer-contact-info-item">
-                <h4>Based in</h4>
-                <p>{SITE.location.city}, {SITE.location.country}</p>
+                <h4>Phone</h4>
+                <p><A href={SITE.phoneHref}>{SITE.phone}</A></p>
+              </div>
+              <div className="footer-contact-info-item">
+                <h4>Address</h4>
+                <p>{SITE.location.street}, {SITE.location.city}, {SITE.location.region}, {SITE.location.country}</p>
               </div>
             </div>
           </div>

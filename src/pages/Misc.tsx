@@ -89,6 +89,8 @@ export const Terms = () => (
       { p: 'Some photographs on this site come from Wikimedia Commons and remain under their own licences. Each is credited on the [image credits](/credits) page. Other brand and product names mentioned on this site, such as Arduino, Raspberry Pi and Blender, belong to their owners and are used only to describe the tools we work with.' },
       { h2: 'Accuracy' },
       { p: 'We work to keep this site accurate and up to date. Prices and plan details for our products are a snapshot, and each product\'s own site is the source of truth. Articles and guides are general information, not professional advice for your particular situation.' },
+      { h2: 'Paying Resbrotherx' },
+      { p: `Payments to ${SITE.legalName} are made in Nigerian naira through a licensed payment provider. Card details are entered on the provider's secure page and never reach us. How to pay, what we charge for and how refunds work are set out in our [payments and refund policy](/refunds).` },
       { h2: 'Liability' },
       { p: 'This website is provided as it is. To the extent the law allows, Resbrotherx is not liable for loss arising from your use of the site or from relying on its content.' },
       { h2: 'Governing law' },
@@ -121,6 +123,48 @@ export const Cookies = () => (
       { p: 'Apsuni, AnimeDoc and Adorė are separate websites with accounts and payments, and they use cookies or similar storage for sign-in. See each product\'s own policy.' },
       { h2: 'More' },
       { p: 'See the [privacy policy](/privacy) for everything else this site does and does not collect.' },
+    ]}
+  />
+)
+
+export const Refunds = () => (
+  <Legal
+    path="/refunds"
+    title="Payments & Refund Policy"
+    kicker="Legal"
+    intro="What you pay Resbrotherx for, how payment works and how to get your money back."
+    description="How payments to Resbrotherx Technologies work: what we charge for, prices in Nigerian naira, secure card payments, and how to request a refund."
+    body={[
+      { h2: 'Who you are paying' },
+      { p: `Payments are made to ${SITE.legalName}, a business name registered with the ${SITE.registration.body}, at ${SITE.location.street}, ${SITE.location.city}, ${SITE.location.region}, ${SITE.location.country}. The name RESBROTHERX may appear on your bank or card statement.` },
+      { h2: 'What we charge for' },
+      { ul: [
+        '**Software and design projects.** Websites, web apps, mobile apps, SaaS platforms, AI features, 3D and animation work and robotics prototypes, as described on our [services](/services) pages. Every project is priced in a written quote before you pay anything.',
+        '**Plans on our products.** Plans for [Apsuni](/products/apsuni) and our other products are listed with their prices on each product\'s own pricing page. You see the price, in naira, before you pay.',
+      ] },
+      { h2: 'How payment works' },
+      { ul: [
+        'Prices are in Nigerian naira (₦) unless a quote says otherwise.',
+        'You can pay by card, bank transfer or USSD through our payment provider. Card details are entered on the provider\'s secure page and never reach our servers.',
+        'For projects, we usually ask for a deposit before work starts and the balance at agreed milestones. The quote sets out the amounts and dates.',
+        'You receive a receipt by email for every successful payment.',
+      ] },
+      { h2: 'Refunds' },
+      { ul: [
+        '**Charged twice or charged for a failed payment.** We refund the extra or failed charge in full.',
+        '**Product plans.** If a plan does not work as described, write to us within 7 days of payment and we will fix it or refund you.',
+        '**Projects not yet started.** If you cancel before work starts, we refund your deposit in full.',
+        '**Projects in progress.** If you cancel after work starts, we refund what you paid for work that has not been done. Work already delivered is not refunded.',
+        '**Delivered work.** If what we deliver does not match the agreed quote, tell us within 14 days of delivery and we will correct it. If we cannot, we will agree a partial or full refund with you.',
+      ] },
+      { h2: 'How to ask for a refund' },
+      { ol: [
+        `Write to [${SITE.email}](mailto:${SITE.email}) or call ${SITE.phone}.`,
+        'Include your name, the email used to pay, the amount, the date and the payment reference from your receipt.',
+        'We reply within 3 working days. An approved refund goes back to the card or account you paid with, normally within 5 to 10 working days, depending on your bank.',
+      ] },
+      { h2: 'Disputes' },
+      { p: 'Please contact us before raising a dispute with your bank, so we can resolve the problem quickly. These terms are governed by the laws of the Federal Republic of Nigeria.' },
     ]}
   />
 )

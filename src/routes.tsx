@@ -5,7 +5,7 @@ import NotFound from './pages/NotFound'
 import { About, Founder, TeamPage, Careers, Press } from './pages/Company'
 import { Products, ProductDetail, Services, ServiceDetail, Labs, LabDetail, Portfolio, ProjectDetail, Technologies } from './pages/Catalog'
 import { Docs, DocDetail, Blog, BlogPost, FaqPage, Newsletter } from './pages/Content'
-import { Privacy, Terms, Cookies, Credits, SitemapPage } from './pages/Misc'
+import { Privacy, Terms, Cookies, Refunds, Credits, SitemapPage } from './pages/Misc'
 import { PRODUCTS } from './data/products'
 import { SERVICES } from './data/services'
 import { LABS } from './data/labs'
@@ -44,6 +44,7 @@ export const ROUTES: RouteDef[] = [
   { path: '/privacy', element: <Privacy /> },
   { path: '/terms', element: <Terms /> },
   { path: '/cookies', element: <Cookies /> },
+  { path: '/refunds', element: <Refunds /> },
   { path: '/credits', element: <Credits /> },
   { path: '/sitemap', element: <SitemapPage /> },
   { path: '*', element: <NotFound /> },
@@ -80,6 +81,7 @@ export function allPages(): PageEntry[] {
     ['/privacy', 0.2],
     ['/terms', 0.2],
     ['/cookies', 0.2],
+    ['/refunds', 0.3],
     ['/credits', 0.2],
   ]
   return [

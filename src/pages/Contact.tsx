@@ -166,6 +166,8 @@ export function ContactSection({ heading = 'h2' }: { heading?: 'h1' | 'h2' }) {
                 <p>
                   <A href={`mailto:${SITE.email}`}>{SITE.email}</A>
                   <br />
+                  <A href={SITE.phoneHref}>{SITE.phone}</A>
+                  <br />
                   Replies in English
                 </p>
               </div>
@@ -173,9 +175,11 @@ export function ContactSection({ heading = 'h2' }: { heading?: 'h1' | 'h2' }) {
                 <img src="/assets/imgs/map.svg" alt="" width="44" height="44" loading="lazy" />
                 <h3>Where we are</h3>
                 <p>
-                  {SITE.location.city}, {SITE.location.region}
+                  {SITE.legalName}
                   <br />
-                  {SITE.location.country}
+                  {SITE.location.street}, {SITE.location.city}
+                  <br />
+                  {SITE.location.region}, {SITE.location.country}
                 </p>
               </div>
               <ul className="contact-social-links">
