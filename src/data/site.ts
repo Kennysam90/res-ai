@@ -53,8 +53,8 @@ export const FOUNDER = {
   role: 'Founder & CEO',
   jobTitle: 'Founder and Chief Executive Officer of Resbrotherx; CEO of Apsuni',
   initials: 'PF',
-  photo: '/assets/media/founder-lagos-v3.webp' as string | null,
-  photoThumbnail: '/assets/media/founder-lagos-v3-square.webp',
+  photo: '/assets/media/founder-first-nigerian.webp' as string | null,
+  photoThumbnail: '/assets/media/founder-first-nigerian-square.webp',
   summary:
     'Patrick Francis Ugochukwu is a software engineer and the founder and CEO of Resbrotherx, the technology company behind Apsuni, AnimeDoc and Adorė. He is also the CEO of Apsuni.',
   skills: ['Python', 'Django', 'JavaScript', 'TypeScript', 'React', 'React Native', 'Node.js', 'HTML & CSS'],

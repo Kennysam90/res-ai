@@ -134,7 +134,7 @@ export function About() {
 
 function FounderPortrait({ large = false }: { large?: boolean }) {
   if (FOUNDER.photo) {
-    return <img src={large ? FOUNDER.photo : FOUNDER.photoThumbnail} alt={`${FOUNDER.name}, ${FOUNDER.role} of Resbrotherx`} className={`rbx-portrait${large ? ' is-lg' : ''}`} width={large ? 960 : 240} height={large ? 1280 : 240} />
+    return <img src={large ? FOUNDER.photo : FOUNDER.photoThumbnail} alt={`${FOUNDER.name}, ${FOUNDER.role} of Resbrotherx`} className={`rbx-portrait${large ? ' is-lg' : ''}`} width={large ? 608 : 240} height={large ? 1000 : 240} />
   }
   return (
     <div className={`rbx-portrait is-mark${large ? ' is-lg' : ''}`} role="img" aria-label={`${FOUNDER.name}, ${FOUNDER.role} of Resbrotherx`}>
