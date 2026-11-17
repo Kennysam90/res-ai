@@ -27,19 +27,25 @@ await writeFile(join(PUBLIC, 'icons', 'logo-512.png'), await svgPng(markSvg({ si
 await writeFile(join(PUBLIC, 'icons', 'icon-192.png'), await svgPng(markSvg({ size: 192, background: '#ffffff', padding: 16 }), 192))
 await writeFile(join(PUBLIC, 'icons', 'apple-touch-icon.png'), await svgPng(markSvg({ size: 180, background: '#ffffff', padding: 16 }), 180))
 
-// favicon.ico: a single 32px PNG inside an ICO container.
-const p32 = await svgPng(markSvg({ size: 32, padding: 2 }), 32)
-const ico = Buffer.alloc(22)
-ico.writeUInt16LE(0, 0)
+// Raster favicons share the existing brand mark and stay at stable crawlable URLs.
+const sizes = [48, 96]
+const frames = await Promise.all(sizes.map((size) => svgPng(markSvg({ size, background: '#ffffff', padding: size / 12 }), size)))
+const ico = Buffer.alloc(6 + 16 * frames.length)
 ico.writeUInt16LE(1, 2)
-ico.writeUInt16LE(1, 4)
-ico.writeUInt8(32, 6)
-ico.writeUInt8(32, 7)
-ico.writeUInt16LE(1, 10)
-ico.writeUInt16LE(32, 12)
-ico.writeUInt32LE(p32.length, 14)
-ico.writeUInt32LE(22, 18)
-await writeFile(join(PUBLIC, 'favicon.ico'), Buffer.concat([ico, p32]))
+ico.writeUInt16LE(frames.length, 4)
+let offset = ico.length
+frames.forEach((frame, i) => {
+  const entry = 6 + 16 * i
+  ico.writeUInt8(sizes[i], entry)
+  ico.writeUInt8(sizes[i], entry + 1)
+  ico.writeUInt16LE(1, entry + 4)
+  ico.writeUInt16LE(32, entry + 6)
+  ico.writeUInt32LE(frame.length, entry + 8)
+  ico.writeUInt32LE(offset, entry + 12)
+  offset += frame.length
+})
+await writeFile(join(PUBLIC, 'favicon.ico'), Buffer.concat([ico, ...frames]))
+await writeFile(join(PUBLIC, 'favicon.png'), await svgPng(markSvg({ size: 192, background: '#ffffff', padding: 16 }), 192))
 
 /* ------------------------------------------------------------ wordmark */
 
